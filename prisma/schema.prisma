@@ -55,7 +55,7 @@ model LeadCapture {
   whatsapp   String?
   empresa    String?
   segmento   String?
-  plano      String?  @default("TRIAL_7_DIAS")
+  plano      String?  @default("FREE")
   origem     String?  @default("LANDING_PAGE")
   createdAt  DateTime @default(now()) @map("created_at")
 

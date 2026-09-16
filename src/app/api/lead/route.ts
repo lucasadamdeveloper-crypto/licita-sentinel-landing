@@ -22,7 +22,7 @@ export async function POST(req: Request) {
           whatsapp: whatsapp ? String(whatsapp).trim() : null,
           empresa: empresa ? String(empresa).trim() : null,
           segmento: segmento ? String(segmento).trim() : null,
-          plano: plano || "TRIAL_7_DIAS",
+          plano: plano || "FREE",
           origem: "LANDING_PAGE",
         },
       });
