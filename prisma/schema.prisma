@@ -1,0 +1,63 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+// 1. Users (Compartilhado com o App Licita Sentinel)
+model User {
+  id                 String    @id @default(uuid())
+  email              String    @unique
+  senha              String
+  empresa            String
+  cnpj               String?
+  telefone           String?
+  tipoNegocio        String?   @default("EPP") @map("tipo_negocio")
+  segmentos          String[]  @default([])
+  role               String    @default("CLIENT") // "ADMIN" ou "CLIENT"
+  plano              String    @default("FREE") // FREE, TRIAL, PRO, BUSINESS
+  subscriptionStatus String    @default("PENDING") @map("subscription_status")
+  trialEndsAt        DateTime? @map("trial_ends_at")
+  lastManualRefreshAt DateTime? @map("last_manual_refresh_at")
+  createdAt          DateTime  @default(now()) @map("created_at")
+  updatedAt          DateTime  @updatedAt @map("updated_at")
+
+  @@map("users")
+}
+
+// 2. Tenders (Licitações do PNCP/Portais)
+model Tender {
+  id             String    @id @default(uuid())
+  idOficialPncp  String    @unique @map("id_oficial_pncp")
+  objeto         String    @db.Text
+  orgao          String
+  dataAbertura   DateTime? @map("data_abertura")
+  valorEstimado  Decimal?  @default(0.00) @db.Decimal(15, 2) @map("valor_estimado")
+  linkEdital     String    @map("link_edital")
+  uf             String
+  municipio      String?
+  modalidade     String?
+  createdAt      DateTime  @default(now()) @map("created_at")
+
+  @@index([uf])
+  @@index([dataAbertura])
+  @@map("tenders")
+}
+
+// 3. Leads capturados na Landing Page (Interesse em Teste / Demonstração)
+model LeadCapture {
+  id         String   @id @default(uuid())
+  nome       String
+  email      String
+  whatsapp   String?
+  empresa    String?
+  segmento   String?
+  plano      String?  @default("TRIAL_7_DIAS")
+  origem     String?  @default("LANDING_PAGE")
+  createdAt  DateTime @default(now()) @map("created_at")
+
+  @@map("landing_leads")
+}
