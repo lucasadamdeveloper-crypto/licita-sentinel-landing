@@ -319,8 +319,8 @@ export default function InteractiveDemoSection({ onOpenLeadModal }: InteractiveD
                       <span className="text-base font-bold font-mono text-amber-400">R$ 148.500,00</span>
                     </div>
 
-                    <span className="text-[11px] font-mono text-slate-400 flex items-center gap-1">
-                      <Zap className="w-3 h-3 text-amber-400" /> Alerta já enviado via WhatsApp
+                    <span className="text-[11px] font-mono text-cyan-300 flex items-center gap-1">
+                      <Zap className="w-3 h-3 text-amber-400" /> Disputa ativa: Alerta no WhatsApp caso o pregoeiro chame
                     </span>
                   </div>
                 </div>

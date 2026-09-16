@@ -111,8 +111,8 @@ export default function ProblemSolutionSection({ onOpenLeadModal }: ProblemSolut
                 <div className="flex items-start gap-3 p-3.5 rounded-2xl bg-cyan-950/30 border border-cyan-500/30">
                   <MessageSquare className="w-5 h-5 text-cyan-400 shrink-0 mt-0.5" />
                   <div>
-                    <strong className="text-white block">Aviso Imediato no seu WhatsApp:</strong>
-                    Assim que uma oportunidade do seu nicho é publicada ou quando há movimentação crítica, o Sentinela apita no seu celular. Você responde no tempo certo onde quer que esteja.
+                    <strong className="text-white block">Aviso Imediato no WhatsApp Durante a Disputa:</strong>
+                    As licitações do seu nicho ficam organizadas no seu Dashboard. E quando sua empresa já está participando da disputa do pregão, o Sentinela envia alertas imediatos no seu celular caso o pregoeiro chame no chat ou abra o prazo fatal de 2 horas.
                   </div>
                 </div>
 

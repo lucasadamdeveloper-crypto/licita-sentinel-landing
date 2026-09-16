@@ -48,7 +48,7 @@ export default function BeginnerGuideSection({ onOpenLeadModal }: BeginnerGuideS
       number: "04",
       title: "Proposta e Disputa sem Medo de Errar",
       tag: "Orientação Passo a Passo",
-      desc: "O Sentinela calcula os prazos, aponta riscos e te ajuda a formatar sua proposta comercial dentro das regras exatas do órgão licitante.",
+      desc: "Acompanhe suas oportunidades pelo Dashboard e receba avisos no WhatsApp durante a disputa caso o pregoeiro chame no prazo de 2h. O Sentinela ajuda a formatar e enviar tudo no tempo certo.",
       tip: "Empresas que utilizam o Licita Sentinel registram em média +45% a mais de taxa de vitória em licitações.",
     },
   ];

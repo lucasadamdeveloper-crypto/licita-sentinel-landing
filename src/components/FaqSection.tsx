@@ -13,7 +13,7 @@ export default function FaqSection() {
     },
     {
       q: "Como funcionam os alertas no WhatsApp para não perder o prazo de 2 horas do pregoeiro?",
-      a: "No plano Business, o Sentinela se conecta ao seu WhatsApp. Quando uma licitação do seu segmento é aberta ou quando o pregoeiro publica uma convocação com prazo fatal (como o temido prazo de 2 horas para envio de proposta e certidões), o sistema avisa imediatamente no seu celular. Além disso, nosso checklist já deixa todas as certidões exigidas pré-auditadas para você anexar em minutos.",
+      a: "As oportunidades e novos editais aparecem organizados dentro do seu Dashboard na plataforma. Já os alertas no WhatsApp entram em ação quando a sua empresa está participando do pregão em andamento: caso o pregoeiro chame sua empresa no chat ou abra a convocação com o temido prazo de 2 horas para envio da proposta readequada e certidões, o Sentinela avisa imediatamente no seu celular para você não ser desclassificado nem penalizado. Além disso, nosso checklist já deixa todas as certidões exigidas pré-auditadas para você anexar em minutos.",
     },
     {
       q: "Quanto minha empresa economiza em funcionários?",

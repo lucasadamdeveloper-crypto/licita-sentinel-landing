@@ -113,7 +113,7 @@ export default function RegisterPage() {
               </div>
 
               <div>
-                <label className="block text-slate-300 font-mono mb-1">WhatsApp para Avisos</label>
+                <label className="block text-slate-300 font-mono mb-1">WhatsApp para Alertas de Disputa</label>
                 <div className="relative">
                   <Phone className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
                   <input

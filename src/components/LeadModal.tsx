@@ -95,7 +95,7 @@ export default function LeadModal({ isOpen, onClose, selectedPlan = "BUSINESS" }
             </div>
 
             <p className="text-[11px] font-mono text-slate-400">
-              Nossa equipe enviará os primeiros alertas de oportunidades diretamente no seu WhatsApp.
+              Suas oportunidades estão no Dashboard e as convocações de disputa chegam direto no WhatsApp.
             </p>
           </div>
         ) : (
@@ -110,7 +110,7 @@ export default function LeadModal({ isOpen, onClose, selectedPlan = "BUSINESS" }
                 {selectedPlan === "FREE" ? "Crie sua Conta Gratuita" : `Comece no Plano ${selectedPlan}`}
               </h3>
               <p className="text-xs text-slate-400">
-                Preencha os dados abaixo para receber os editais do seu nicho e convocações no WhatsApp.
+                Acesse o dashboard com os editais do seu nicho e ative alertas no WhatsApp para quando estiver participando do pregão.
               </p>
             </div>
 
@@ -168,7 +168,7 @@ export default function LeadModal({ isOpen, onClose, selectedPlan = "BUSINESS" }
                 </div>
 
                 <div>
-                  <label className="block text-slate-300 font-mono mb-1">WhatsApp para Alertas</label>
+                  <label className="block text-slate-300 font-mono mb-1">WhatsApp para Alertas de Disputa</label>
                   <div className="relative">
                     <Phone className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
                     <input

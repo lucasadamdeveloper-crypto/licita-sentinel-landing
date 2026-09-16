@@ -50,7 +50,7 @@ export default function HeroSection({ onOpenLeadModal }: HeroSectionProps) {
           </h1>
 
           <p className="text-base sm:text-lg md:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-            Economize o salário de <strong>2 ou mais funcionários</strong> dedicados. O <strong>Licita Sentinel</strong> varre os portais 24h, avisa convocações urgentes no seu <strong>WhatsApp</strong> e impede que sua empresa perca contratos no <strong>prazo fatal de 2 horas do pregoeiro</strong> para envio de proposta e certidões.
+            As licitações do seu nicho aparecem organizadas no <strong>Dashboard</strong> em tempo real. E quando sua empresa já estiver participando da disputa do pregão, o <strong>Licita Sentinel</strong> te avisa no <strong>WhatsApp</strong> se o pregoeiro convocar no chat ou abrir o <strong>prazo fatal de 2 horas</strong> — economizando o salário de <strong>2 ou mais funcionários</strong> dando F5.
           </p>
 
           {/* Botões de Ação Principal */}
@@ -81,7 +81,7 @@ export default function HeroSection({ onOpenLeadModal }: HeroSectionProps) {
             </div>
             <div className="flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4 text-cyan-400" />
-              <span>Alertas imediatos de pregão no WhatsApp</span>
+              <span>Alertas de disputa no WhatsApp</span>
             </div>
             <div className="flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4 text-amber-400" />
@@ -322,7 +322,7 @@ export default function HeroSection({ onOpenLeadModal }: HeroSectionProps) {
               WhatsApp
             </div>
             <div className="text-xs font-mono text-slate-400 mt-1 uppercase tracking-wider">
-              Avisos em Tempo Real
+              Alertas na Disputa
             </div>
           </div>
 

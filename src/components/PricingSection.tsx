@@ -153,7 +153,7 @@ export default function PricingSection({ onOpenLeadModal }: PricingSectionProps)
                 </div>
                 <div className="flex items-start gap-2">
                   <CheckCircle2 className="w-3.5 h-3.5 text-cyan-400 shrink-0 mt-0.5" />
-                  <span><strong>Boletim Matinal & Alertas:</strong> editais quentes do dia</span>
+                  <span><strong>Boletim Matinal por E-mail:</strong> editais quentes do dia</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <CheckCircle2 className="w-3.5 h-3.5 text-cyan-400 shrink-0 mt-0.5" />
@@ -196,7 +196,7 @@ export default function PricingSection({ onOpenLeadModal }: PricingSectionProps)
               </div>
 
               <p className="text-xs text-slate-300 leading-relaxed">
-                Economize 2 funcionários, receba avisos no WhatsApp e vença no prazo de 2h do pregoeiro.
+                Acompanhe editais no Dashboard e receba avisos no WhatsApp durante a disputa para não perder o prazo de 2h do pregoeiro.
               </p>
 
               <div className="pt-2">
@@ -214,7 +214,7 @@ export default function PricingSection({ onOpenLeadModal }: PricingSectionProps)
               <div className="space-y-2.5 pt-4 border-t border-slate-700 text-xs text-slate-200">
                 <div className="flex items-start gap-2">
                   <CheckCircle2 className="w-3.5 h-3.5 text-amber-400 shrink-0 mt-0.5" />
-                  <span><strong>Alertas Imediatos no WhatsApp:</strong> não perca convocações</span>
+                  <span><strong>Alertas na Disputa via WhatsApp:</strong> chamado do pregoeiro e prazo de 2h</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <CheckCircle2 className="w-3.5 h-3.5 text-amber-400 shrink-0 mt-0.5" />
@@ -256,7 +256,7 @@ export default function PricingSection({ onOpenLeadModal }: PricingSectionProps)
         <div className="mt-14 max-w-2xl mx-auto p-4 rounded-2xl bg-[#070E1E] border border-slate-800 text-center flex flex-col sm:flex-row items-center justify-center gap-4 text-xs text-slate-400 font-mono">
           <ShieldCheck className="w-6 h-6 text-emerald-400 shrink-0" />
           <span>
-            <strong>Flexibilidade Total:</strong> Comece hoje no Plano Free ou faça upgrade quando quiser para desbloquear os alertas no WhatsApp e o Sentinela IA.
+            <strong>Flexibilidade Total:</strong> Comece hoje no Plano Free ou faça upgrade quando quiser para desbloquear os alertas de disputa no WhatsApp e o Sentinela IA.
           </span>
         </div>
 

@@ -55,7 +55,7 @@ export default function CtaSection({ onOpenLeadModal }: CtaSectionProps) {
               </div>
               <div className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
-                <span>Alerta imediato no WhatsApp</span>
+                <span>Alerta de disputa no WhatsApp</span>
               </div>
             </div>
 

@@ -16,10 +16,10 @@ export default function FeaturesSection() {
   const features = [
     {
       icon: Radar,
-      title: "Radar com Alertas no WhatsApp",
+      title: "Dashboard Centralizado & Alertas de Disputa",
       badge: "Economia de Funcionários",
       description:
-        "Varredura 24/7 no PNCP, BLL e portais estaduais. Receba no WhatsApp o aviso de novos editais e convocações urgentes sem precisar de 2 funcionários de plantão dando F5.",
+        "Todas as licitações do seu nicho organizadas no Dashboard em tempo real. E quando sua empresa estiver participando do pregão, receba alertas imediatos no WhatsApp caso o pregoeiro convoque no prazo de 2h — sem precisar de 2 funcionários dando F5.",
       color: "from-cyan-500/20 to-transparent",
       borderColor: "border-cyan-500/30",
       iconColor: "text-cyan-400",
