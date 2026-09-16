@@ -113,88 +113,189 @@ export default function HeroSection({ onOpenLeadModal }: HeroSectionProps) {
               </div>
             </div>
 
-            {/* Conteúdo da Interface Simulada */}
-            <div className="p-5 sm:p-8 grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+            {/* Conteúdo da Interface Simulada: TELA REAL DO DASHBOARD */}
+            <div className="p-4 sm:p-6 space-y-4 font-sans">
               
-              {/* Lado Esquerdo: O Radar Sentinel em Ação */}
-              <div className="lg:col-span-4 flex flex-col items-center justify-center p-6 rounded-2xl bg-[#050A14]/80 border border-slate-800 text-center relative overflow-hidden">
-                <div className="relative my-2">
-                  <RadarBackground density={0.9} sizeClassName="w-[180px] h-[180px] sm:w-[200px] h-[200px]" />
+              {/* 1. Funil de Decisão Comercial (Etapa 6 da Jornada) */}
+              <div className="p-3.5 rounded-2xl bg-[#070F22] border border-cyan-500/20 shadow-sm space-y-2">
+                <div className="flex items-center justify-between text-xs">
+                  <span className="font-bold text-cyan-300 uppercase tracking-wider flex items-center gap-1.5 font-mono">
+                    <span className="w-2 h-2 rounded-full bg-cyan-400 animate-ping" />
+                    Funil de Decisão Comercial (Etapa 6 da Jornada)
+                  </span>
+                  <span className="text-[11px] text-slate-400 font-mono hidden sm:inline">
+                    Filtre por estágio da sua proposta:
+                  </span>
                 </div>
-                
-                <div className="mt-3 space-y-1 z-10">
-                  <div className="text-xs font-mono font-bold text-cyan-400 tracking-wider">
-                    RADAR EM VARREDURA
-                  </div>
-                  <div className="text-[11px] text-slate-400">
-                    42 novos editais detectados hoje no seu nicho
-                  </div>
+
+                <div className="flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-none text-xs">
+                  <button className="px-3 py-1.5 rounded-xl font-bold bg-cyan-400 text-black border border-cyan-400 shadow-[0_0_12px_rgba(0,229,255,0.4)] flex items-center gap-1.5 shrink-0">
+                    <span>Todos</span>
+                    <span className="px-1.5 py-0.2 rounded-full text-[10px] font-mono bg-black/20 text-black">29</span>
+                  </button>
+
+                  <button className="px-3 py-1.5 rounded-xl font-bold bg-blue-500/20 text-blue-300 border border-blue-500/40 flex items-center gap-1.5 shrink-0">
+                    <span>🔍 Analisar</span>
+                    <span className="px-1.5 py-0.2 rounded-full text-[10px] font-mono bg-black/40 text-slate-300">0</span>
+                  </button>
+
+                  <button className="px-3 py-1.5 rounded-xl font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 flex items-center gap-1.5 shrink-0">
+                    <span>✅ Participar</span>
+                    <span className="px-1.5 py-0.2 rounded-full text-[10px] font-mono bg-black/40 text-slate-300">2</span>
+                  </button>
+
+                  <button className="px-3 py-1.5 rounded-xl font-bold bg-purple-500/20 text-purple-300 border border-purple-500/40 flex items-center gap-1.5 shrink-0">
+                    <span>📨 Proposta Enviada</span>
+                    <span className="px-1.5 py-0.2 rounded-full text-[10px] font-mono bg-black/40 text-slate-300">0</span>
+                  </button>
+
+                  <button className="px-3 py-1.5 rounded-xl font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40 flex items-center gap-1.5 shrink-0">
+                    <span>🏆 Ganha</span>
+                    <span className="px-1.5 py-0.2 rounded-full text-[10px] font-mono bg-black/40 text-slate-300">0</span>
+                  </button>
+
+                  <button className="px-3 py-1.5 rounded-xl font-bold bg-orange-500/20 text-orange-300 border border-orange-500/40 flex items-center gap-1.5 shrink-0">
+                    <span>🛑 Perdida</span>
+                    <span className="px-1.5 py-0.2 rounded-full text-[10px] font-mono bg-black/40 text-slate-300">0</span>
+                  </button>
                 </div>
               </div>
 
-              {/* Lado Direito: Card de Edital com IA (Visual Premium) */}
-              <div className="lg:col-span-8 space-y-4">
+              {/* 2. Barra de Filtros Rápidos */}
+              <div className="px-4 py-2.5 rounded-xl bg-[#070F22] border border-cyan-500/20 flex items-center justify-between text-xs">
+                <div className="flex items-center gap-2">
+                  <span className="font-bold text-cyan-300 flex items-center gap-1.5">
+                    Filtros rápidos
+                    <span className="px-1.5 py-0.2 rounded-full bg-cyan-400/20 text-[10px] text-cyan-200">Ativos</span>
+                  </span>
+                  <span className="text-slate-500">•</span>
+                  <span className="text-slate-300 font-medium">
+                    Estado: <strong className="text-cyan-300">Paraná (PR)</strong>
+                  </span>
+                </div>
+                <span className="text-slate-400 font-mono text-[11px]">▼</span>
+              </div>
+
+              {/* 3. Abas de Interesse e Esfera */}
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-xs">
+                <div className="flex items-center gap-2">
+                  <button className="px-4 py-2 rounded-xl font-bold bg-gradient-to-r from-cyan-500 to-blue-600 text-white border border-cyan-400 shadow-[0_0_15px_rgba(0,229,255,0.35)] flex items-center gap-2">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-300" />
+                    <span>Com Interesse</span>
+                    <span className="px-2 py-0.5 rounded-full text-[10px] font-mono font-bold bg-black/30 text-cyan-200">29</span>
+                  </button>
+
+                  <button className="px-4 py-2 rounded-xl font-medium text-slate-400 hover:text-white border border-transparent hover:bg-slate-900/60 flex items-center gap-1.5">
+                    <span>✕ Não Tenho Interesse</span>
+                    <span className="px-2 py-0.5 rounded-full text-[10px] font-mono bg-slate-800 text-slate-400">0</span>
+                  </button>
+                </div>
+
+                <div className="px-3 py-1.5 rounded-xl bg-[#070F20] text-slate-300 border border-slate-700 text-xs flex items-center gap-1.5 self-end sm:self-auto font-mono">
+                  <span>Esfera: <strong className="text-white">Todas as Esferas (29)</strong> ▼</span>
+                </div>
+              </div>
+
+              {/* 4. CARD REAL DE OPORTUNIDADE (IDÊNTICO À IMAGEM 2) */}
+              <div className="p-4 sm:p-5 rounded-2xl bg-[#070F22] border border-cyan-500/40 shadow-[0_4px_25px_rgba(0,0,0,0.6)] space-y-3.5 text-left">
                 
-                {/* Header do Edital */}
-                <div className="p-4 rounded-2xl bg-[#0E1A33]/80 border border-cyan-500/30 space-y-3">
-                  <div className="flex flex-wrap items-center justify-between gap-2">
-                    <div className="flex items-center gap-2">
-                      <span className="px-2.5 py-0.5 rounded-md bg-cyan-950 border border-cyan-500/40 text-cyan-300 font-mono text-[11px] font-bold">
-                        PREGÃO ELETRÔNICO Nº 0048/2026
-                      </span>
-                      <span className="px-2 py-0.5 rounded-md bg-slate-800 text-slate-300 font-mono text-[10px]">
-                        PR - PARANÁ
-                      </span>
-                    </div>
-
-                    <div className="flex items-center gap-1.5 text-xs font-mono font-bold text-emerald-400">
-                      <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                      <span>SCORE IA: 96% ALTA CHANCE</span>
-                    </div>
+                {/* Badges de Topo do Card */}
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <div className="flex flex-wrap items-center gap-1.5 text-[10px] font-mono font-bold">
+                    <span className="px-2 py-0.5 rounded-md border border-emerald-400/60 bg-emerald-950/40 text-emerald-300 shadow-[0_0_8px_rgba(16,185,129,0.2)]">
+                      COMPATIBILIDADE 95/100
+                    </span>
+                    <span className="px-2 py-0.5 rounded-md border border-cyan-400/50 bg-cyan-950/60 text-cyan-300">
+                      Match Direto de Nicho
+                    </span>
+                    <span className="px-2 py-0.5 rounded-md bg-blue-950 text-blue-300 border border-blue-500/30">
+                      MUNICIPAL
+                    </span>
+                    <span className="px-2 py-0.5 rounded-md bg-slate-800 text-slate-300">
+                      Serviços
+                    </span>
+                    <span className="px-2 py-0.5 rounded-md bg-emerald-950 text-emerald-300 border border-emerald-500/30">
+                      Disputa em 13 dias
+                    </span>
+                    <span className="px-2 py-0.5 rounded-md bg-slate-800 text-slate-400">
+                      Ampla Concorrência
+                    </span>
+                    <span className="text-slate-400 text-[10px] font-mono hidden md:inline">
+                      Pregão Eletrônico - Registro de Preços
+                    </span>
                   </div>
 
-                  <div>
-                    <h3 className="text-sm sm:text-base font-bold text-white leading-snug">
-                      Aquisição de Equipamentos de Tecnologia da Informação e Segurança de Rede com Garantia On-Site
-                    </h3>
-                    <p className="text-xs text-slate-400 mt-1 flex items-center gap-1.5 font-mono">
-                      <Building2 className="w-3.5 h-3.5 text-slate-400" />
-                      Tribunal de Contas do Estado / Órgão Oficial
-                    </p>
-                  </div>
-
-                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2 border-t border-slate-800">
-                    <div>
-                      <span className="text-[10px] font-mono text-slate-400 block">VALOR ESTIMADO</span>
-                      <span className="text-sm sm:text-base font-mono font-bold text-amber-400">R$ 2.450.000,00</span>
+                  {/* Indicador Circular de 95% + Coração */}
+                  <div className="flex items-center gap-2">
+                    <div className="w-8 h-8 rounded-full border-2 border-cyan-400 bg-cyan-950 flex items-center justify-center font-mono font-bold text-xs text-cyan-300 shadow-[0_0_12px_rgba(0,229,255,0.4)]">
+                      95%
                     </div>
-                    <div>
-                      <span className="text-[10px] font-mono text-slate-400 block">DISPUTA PREVISTA</span>
-                      <span className="text-xs sm:text-sm font-mono text-slate-200">22/09 às 09:30</span>
-                    </div>
-                    <div className="col-span-2 sm:col-span-1">
-                      <span className="text-[10px] font-mono text-slate-400 block">ENQUADRAMENTO</span>
-                      <span className="text-xs font-mono text-cyan-300">Lei 14.133 • Ampla Disputa</span>
-                    </div>
+                    <span className="text-slate-400 hover:text-rose-400 cursor-pointer text-sm">♡</span>
+                    <span className="text-slate-400 text-sm">›</span>
                   </div>
                 </div>
 
-                {/* Box de Análise da IA Sentinel */}
-                <div className="p-3.5 rounded-xl bg-gradient-to-r from-cyan-950/40 via-[#0B152A] to-amber-950/20 border border-cyan-500/20 text-xs space-y-2">
-                  <div className="flex items-center gap-2 text-cyan-300 font-mono font-bold text-[11px]">
-                    <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
-                    <span>SÍNTESE EXECUTIVA DO SENTINELA</span>
+                {/* Órgão e Localidade */}
+                <div>
+                  <span className="text-[11px] font-mono text-slate-400 block uppercase tracking-wider">
+                    SERVIÇO MUNICIPAL DE SANEAMENTO E INFRAESTRUTURA DE LONDRINA • Londrina/PR
+                  </span>
+
+                  {/* Título com Destaques em Amarelo */}
+                  <h4 className="text-sm sm:text-base font-bold text-white leading-snug mt-1">
+                    Prestação de serviços de <mark className="bg-yellow-400 text-black px-1 rounded font-bold">segurança privada</mark>, <mark className="bg-yellow-400 text-black px-1 rounded font-bold">vigilância desarmada</mark> e <mark className="bg-yellow-400 text-black px-1 rounded font-bold">monitoramento eletrônico</mark> 24 horas por sistema <mark className="bg-yellow-400 text-black px-1 rounded font-bold">CFTV</mark> com apoio tático de viaturas para as estações de tratamento e reservatórios.
+                  </h4>
+                </div>
+
+                {/* Box de "Por que deu Match:" (Laranja/Âmbar) */}
+                <div className="p-3 rounded-xl bg-[#140F09] border border-amber-500/40 text-xs space-y-1.5">
+                  <div className="flex items-center gap-1.5 text-amber-400 font-mono font-bold text-[11px]">
+                    <span>✨ Por que deu Match:</span>
                   </div>
                   <p className="text-slate-300 text-[11px] leading-relaxed">
-                    Edital favorável. <strong>Exigência técnica atendida</strong> pelos seus atestados cadastrados. Cláusula 7.2 prevê pagamento em até 15 dias úteis. Nenhum risco impeditivo de habilitação identificado nos artigos 66 a 69.
+                    Match de escopo primário em Segurança Privada, Portaria & Controlador de Acesso: <em>"segurança privada"</em>, <em>"vigilância desarmada"</em>, <em>"monitoramento eletrônico"</em> no objeto/título da contratação pública.
                   </p>
-                  <div className="flex items-center gap-3 pt-1 text-[10px] font-mono">
-                    <span className="text-emerald-400 flex items-center gap-1">
-                      <CheckCircle2 className="w-3 h-3" /> Certidões 100% OK
-                    </span>
-                    <span className="text-amber-400 flex items-center gap-1">
-                      <AlertTriangle className="w-3 h-3" /> Prazo de Entrega: 30 dias corridos
-                    </span>
+                  <div className="flex flex-wrap gap-1.5 pt-1 text-[10px] font-mono text-slate-400">
+                    <span className="text-amber-300/80">Tags no Objeto:</span>
+                    <span className="bg-slate-900 px-1.5 py-0.2 rounded border border-slate-800">#segurança privada</span>
+                    <span className="bg-slate-900 px-1.5 py-0.2 rounded border border-slate-800">#vigilância desarmada</span>
+                    <span className="bg-slate-900 px-1.5 py-0.2 rounded border border-slate-800">#monitoramento eletrônico</span>
+                    <span className="bg-slate-900 px-1.5 py-0.2 rounded border border-slate-800">#cftv</span>
+                  </div>
+                </div>
+
+                {/* Barra Inferior com Valores e Botões de Ação */}
+                <div className="pt-2 border-t border-slate-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+                  <div className="flex items-center gap-6">
+                    <div>
+                      <span className="text-[10px] font-mono text-slate-400 block">VALOR ESTIMADO</span>
+                      <span className="text-base font-extrabold font-mono text-white">R$ 3.2M</span>
+                    </div>
+
+                    <div>
+                      <span className="text-[10px] font-mono text-slate-400 block">DISPUTA / SESSÃO</span>
+                      <div className="flex items-center gap-1.5 text-xs font-mono text-emerald-400 font-bold">
+                        <span>📅 Disputa: 29/09/2026, 10:00</span>
+                        <span className="text-slate-400 font-normal hidden sm:inline">(Disputa em 13 dias)</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-2 w-full sm:w-auto">
+                    <button
+                      onClick={() => onOpenLeadModal("FREE")}
+                      className="flex-1 sm:flex-initial px-4 py-2.5 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-mono font-bold text-xs shadow-[0_0_15px_rgba(0,229,255,0.3)] hover:shadow-[0_0_25px_rgba(0,229,255,0.5)] transition-all flex items-center justify-center gap-1.5"
+                    >
+                      <Sparkles className="w-3.5 h-3.5" />
+                      <span>Análise com IA</span>
+                    </button>
+
+                    <button
+                      onClick={() => onOpenLeadModal("FREE")}
+                      className="px-3 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-rose-300 hover:text-white font-mono text-xs transition-all flex items-center justify-center gap-1"
+                    >
+                      <span>✕ Não tenho interesse</span>
+                    </button>
                   </div>
                 </div>
 
