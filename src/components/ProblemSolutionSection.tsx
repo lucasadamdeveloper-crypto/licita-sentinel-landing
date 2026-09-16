@@ -5,14 +5,16 @@ import {
   AlertTriangle, 
   Clock, 
   Users, 
-  CheckCircle2, 
-  MessageSquare, 
   DollarSign, 
+  CheckCircle2, 
+  XCircle, 
   ShieldAlert, 
+  Sparkles, 
   ArrowRight,
-  Zap,
-  Sparkles
+  MessageSquare,
+  Zap
 } from "lucide-react";
+import { getWhatsAppLink } from "@/lib/constants";
 
 interface ProblemSolutionSectionProps {
   onOpenLeadModal: (plan?: string) => void;
@@ -135,14 +137,16 @@ export default function ProblemSolutionSection({ onOpenLeadModal }: ProblemSolut
             </div>
 
             <div className="pt-2">
-              <button
-                onClick={() => onOpenLeadModal("FREE")}
+              <a
+                href={getWhatsAppLink("FREE")}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full py-4 rounded-2xl bg-gradient-to-r from-cyan-400 via-cyan-300 to-cyan-400 text-black font-mono font-extrabold text-xs sm:text-sm shadow-[0_0_25px_rgba(0,229,255,0.35)] hover:shadow-[0_0_40px_rgba(0,229,255,0.6)] transition-all flex items-center justify-center gap-2"
               >
                 <Sparkles className="w-4 h-4" />
-                <span>COMEÇAR NO PLANO GRATUITO AGORA</span>
+                <span>SOLICITAR TESTE NO WHATSAPP</span>
                 <ArrowRight className="w-4 h-4" />
-              </button>
+              </a>
             </div>
           </div>
 

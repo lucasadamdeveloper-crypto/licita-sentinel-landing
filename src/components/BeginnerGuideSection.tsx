@@ -6,14 +6,13 @@ import {
   CheckCircle2, 
   ArrowRight, 
   Sparkles, 
-  BookOpen, 
-  HelpCircle, 
   TrendingUp, 
-  FileCheck, 
-  Store, 
-  Award,
+  HelpCircle,
+  FileText,
+  ShieldCheck,
   ChevronRight
 } from "lucide-react";
+import { getWhatsAppLink } from "@/lib/constants";
 
 interface BeginnerGuideSectionProps {
   onOpenLeadModal: (plan?: string) => void;
@@ -94,13 +93,15 @@ export default function BeginnerGuideSection({ onOpenLeadModal }: BeginnerGuideS
             </div>
           </div>
 
-          <button
-            onClick={() => onOpenLeadModal("FREE")}
+          <a
+            href={getWhatsAppLink("INICIANTE")}
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-6 py-3 rounded-xl bg-cyan-400 text-black font-mono font-bold text-xs hover:bg-cyan-300 transition-all shrink-0 shadow-md flex items-center gap-2"
           >
-            <span>Começar do Zero</span>
+            <span>Falar com Especialista no WhatsApp</span>
             <ArrowRight className="w-4 h-4" />
-          </button>
+          </a>
         </div>
 
         {/* Passo a Passo Interativo para Iniciantes */}
@@ -173,13 +174,15 @@ export default function BeginnerGuideSection({ onOpenLeadModal }: BeginnerGuideS
               <span className="text-xs font-mono text-slate-400">
                 Qualquer CNPJ pode começar hoje mesmo.
               </span>
-              <button
-                onClick={() => onOpenLeadModal("FREE")}
+              <a
+                href={getWhatsAppLink("INICIANTE")}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full sm:w-auto px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-400 to-cyan-500 text-black font-mono font-bold text-xs hover:shadow-[0_0_25px_rgba(0,229,255,0.4)] transition-all flex items-center justify-center gap-2"
               >
-                <span>CRIAR CONTA GRÁTIS E APRENDER</span>
+                <span>QUERO COMEÇAR VIA WHATSAPP</span>
                 <ArrowRight className="w-4 h-4" />
-              </button>
+              </a>
             </div>
           </div>
 

@@ -2,24 +2,30 @@
 
 import React, { useState } from "react";
 import { 
+  Cpu, 
   Sparkles, 
-  FileText, 
-  ShieldAlert, 
+  CheckCircle2, 
   FileCheck, 
+  FileSignature, 
+  Radar, 
+  ArrowRight, 
   Copy, 
   Check, 
-  ArrowRight,
-  TrendingUp,
-  Cpu,
-  Search,
-  Radar,
-  SlidersHorizontal,
+  ExternalLink,
+  ShieldAlert,
   Building2,
   Calendar,
-  ExternalLink,
+  DollarSign,
+  Search,
+  Filter,
   Zap,
-  Tag
+  Clock,
+  FileText,
+  SlidersHorizontal,
+  Tag,
+  TrendingUp
 } from "lucide-react";
+import { getWhatsAppLink } from "@/lib/constants";
 
 interface InteractiveDemoSectionProps {
   onOpenLeadModal: (plan?: string) => void;
@@ -332,12 +338,15 @@ export default function InteractiveDemoSection({ onOpenLeadModal }: InteractiveD
                 <span className="text-xs text-slate-300">
                   Quer ver todos os editais abertos hoje no seu CNPJ e estado?
                 </span>
-                <button
-                  onClick={() => onOpenLeadModal("FREE")}
-                  className="px-4 py-2 rounded-xl bg-cyan-400 text-black font-mono font-bold text-xs hover:bg-cyan-300 transition-all shrink-0"
+                <a
+                  href={getWhatsAppLink("DEMO")}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 rounded-xl bg-cyan-400 text-black font-mono font-bold text-xs hover:bg-cyan-300 transition-all shrink-0 flex items-center gap-1.5"
                 >
-                  Criar Conta Gratuita no Radar
-                </button>
+                  <Sparkles className="w-3.5 h-3.5" />
+                  <span>Ver Editais no WhatsApp</span>
+                </a>
               </div>
 
             </div>
@@ -392,12 +401,15 @@ export default function InteractiveDemoSection({ onOpenLeadModal }: InteractiveD
                 <span className="text-xs text-slate-300">
                   Quer ver este relatório em tempo real para os editais da sua empresa?
                 </span>
-                <button
-                  onClick={() => onOpenLeadModal("FREE")}
-                  className="px-4 py-2 rounded-xl bg-cyan-400 text-black font-mono font-bold text-xs hover:bg-cyan-300 transition-all shrink-0"
+                <a
+                  href={getWhatsAppLink("DEMO")}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 rounded-xl bg-cyan-400 text-black font-mono font-bold text-xs hover:bg-cyan-300 transition-all shrink-0 flex items-center gap-1.5"
                 >
-                  Testar com seu CNPJ
-                </button>
+                  <Sparkles className="w-3.5 h-3.5" />
+                  <span>Testar com seu CNPJ via WhatsApp</span>
+                </a>
               </div>
             </div>
           )}

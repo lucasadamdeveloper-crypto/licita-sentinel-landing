@@ -2,6 +2,7 @@
 
 import React from "react";
 import { Sparkles, ArrowRight, ShieldCheck, CheckCircle2 } from "lucide-react";
+import { getWhatsAppLink } from "@/lib/constants";
 
 interface CtaSectionProps {
   onOpenLeadModal: (plan?: string) => void;
@@ -34,14 +35,16 @@ export default function CtaSection({ onOpenLeadModal }: CtaSectionProps) {
             </p>
 
             <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <button
-                onClick={() => onOpenLeadModal("FREE")}
+              <a
+                href={getWhatsAppLink("FREE")}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full sm:w-auto px-9 py-4 rounded-2xl bg-gradient-to-r from-cyan-400 via-cyan-300 to-cyan-400 text-black font-mono font-extrabold text-sm sm:text-base shadow-[0_0_30px_rgba(0,229,255,0.4)] hover:shadow-[0_0_50px_rgba(0,229,255,0.7)] hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-2"
               >
                 <Sparkles className="w-5 h-5 text-black" />
-                <span>CRIAR MINHA CONTA GRATUITA</span>
+                <span>SOLICITAR TESTE NO WHATSAPP</span>
                 <ArrowRight className="w-5 h-5 text-black" />
-              </button>
+              </a>
             </div>
 
             <div className="pt-2 flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs font-mono text-slate-400">

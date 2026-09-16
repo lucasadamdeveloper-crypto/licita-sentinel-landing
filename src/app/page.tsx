@@ -14,6 +14,7 @@ import FaqSection from "@/components/FaqSection";
 import CtaSection from "@/components/CtaSection";
 import Footer from "@/components/Footer";
 import LeadModal from "@/components/LeadModal";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 export default function LandingPage() {
   const [leadModalOpen, setLeadModalOpen] = useState(false);
@@ -68,12 +69,8 @@ export default function LandingPage() {
       {/* 10. Rodapé Completo */}
       <Footer />
 
-      {/* Modal de Conversão e Teste de 7 Dias */}
-      <LeadModal
-        isOpen={leadModalOpen}
-        onClose={handleCloseLeadModal}
-        selectedPlan={selectedPlan}
-      />
+      {/* Botão Flutuante do WhatsApp */}
+      <FloatingWhatsApp />
     </div>
   );
 }

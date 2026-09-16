@@ -2,11 +2,10 @@
 
 import React from "react";
 import Logo from "./Logo";
-import { ShieldCheck, Mail, Phone, ExternalLink } from "lucide-react";
+import { ShieldCheck, Mail, Phone, ExternalLink, MessageCircle } from "lucide-react";
+import { getLoginLink, getWhatsAppLink, WHATSAPP_DISPLAY } from "@/lib/constants";
 
 export default function Footer() {
-  const appUrl = process.env.NEXT_PUBLIC_APP_URL || "https://app.licitasentinel.com.br";
-
   return (
     <footer className="bg-[#03060C] border-t border-slate-800/80 pt-16 pb-12 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -20,10 +19,22 @@ export default function Footer() {
               O Sentinela de inteligência artificial de alta performance para empresas vencerem licitações públicas com conformidade estrita à Lei 14.133/2021.
             </p>
 
-            {/* Status do Sistema em Tempo Real */}
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-[11px] font-mono text-slate-300">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-              <span>SISTEMAS OPERACIONAIS • PNCP ONLINE</span>
+            {/* WhatsApp e Status */}
+            <div className="flex flex-col gap-2 pt-2">
+              <a 
+                href={getWhatsAppLink("GERAL")} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-xs font-mono text-emerald-400 hover:text-emerald-300 transition-colors"
+              >
+                <MessageCircle className="w-4 h-4" />
+                <span>WhatsApp Comercial: {WHATSAPP_DISPLAY}</span>
+              </a>
+
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-[11px] font-mono text-slate-300 w-fit">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                <span>SISTEMAS OPERACIONAIS • PNCP ONLINE</span>
+              </div>
             </div>
           </div>
 
@@ -49,8 +60,8 @@ export default function Footer() {
             <ul className="space-y-2 text-xs text-slate-400 font-mono">
               <li><a href="#planos" className="hover:text-cyan-400 transition-colors">Plano Pro (R$ 119,90)</a></li>
               <li><a href="#planos" className="hover:text-amber-400 transition-colors">Plano Business (R$ 189,90)</a></li>
-              <li><a href={`${appUrl}/login`} className="hover:text-cyan-400 transition-colors flex items-center gap-1">Entrar no Software <ExternalLink className="w-3 h-3" /></a></li>
-              <li><a href={`${appUrl}/register`} className="hover:text-cyan-400 transition-colors flex items-center gap-1">Cadastro de 7 Dias <ExternalLink className="w-3 h-3" /></a></li>
+              <li><a href={getLoginLink()} className="hover:text-cyan-400 transition-colors flex items-center gap-1">Entrar no Software <ExternalLink className="w-3 h-3" /></a></li>
+              <li><a href={getWhatsAppLink("FREE")} target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300 transition-colors flex items-center gap-1">Testar no WhatsApp <ExternalLink className="w-3 h-3" /></a></li>
             </ul>
           </div>
 

@@ -5,15 +5,21 @@ import RadarBackground from "./RadarBackground";
 import { 
   Sparkles, 
   ArrowRight, 
-  ShieldCheck, 
-  Radar, 
   CheckCircle2, 
+  Play, 
+  ShieldCheck, 
   FileText, 
-  TrendingUp, 
+  DollarSign, 
   Building2, 
-  AlertTriangle,
-  Play
+  Clock, 
+  FileCheck2,
+  Lock,
+  Search,
+  ExternalLink,
+  ChevronRight,
+  Filter
 } from "lucide-react";
+import { getWhatsAppLink } from "@/lib/constants";
 
 interface HeroSectionProps {
   onOpenLeadModal: (plan?: string) => void;
@@ -55,14 +61,16 @@ export default function HeroSection({ onOpenLeadModal }: HeroSectionProps) {
 
           {/* Botões de Ação Principal */}
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button
-              onClick={() => onOpenLeadModal("FREE")}
+            <a
+              href={getWhatsAppLink("FREE")}
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-cyan-400 via-cyan-300 to-cyan-400 text-black font-mono font-extrabold text-sm sm:text-base shadow-[0_0_30px_rgba(0,229,255,0.4)] hover:shadow-[0_0_50px_rgba(0,229,255,0.7)] hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-2.5"
             >
               <Sparkles className="w-5 h-5 text-black" />
-              <span>CRIAR CONTA GRATUITA AGORA</span>
+              <span>QUERO TESTAR NO WHATSAPP</span>
               <ArrowRight className="w-5 h-5 text-black" />
-            </button>
+            </a>
 
             <a
               href="#demonstracao"
@@ -282,13 +290,15 @@ export default function HeroSection({ onOpenLeadModal }: HeroSectionProps) {
                   </div>
 
                   <div className="flex items-center gap-2 w-full sm:w-auto">
-                    <button
-                      onClick={() => onOpenLeadModal("FREE")}
+                    <a
+                      href={getWhatsAppLink("DEMO")}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="flex-1 sm:flex-initial px-4 py-2.5 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-mono font-bold text-xs shadow-[0_0_15px_rgba(0,229,255,0.3)] hover:shadow-[0_0_25px_rgba(0,229,255,0.5)] transition-all flex items-center justify-center gap-1.5"
                     >
                       <Sparkles className="w-3.5 h-3.5" />
                       <span>Análise com IA</span>
-                    </button>
+                    </a>
 
                     <button
                       onClick={() => onOpenLeadModal("FREE")}

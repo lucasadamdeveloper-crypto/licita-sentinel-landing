@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Logo from "./Logo";
 import { Menu, X, ArrowRight, ShieldCheck, Sparkles, LogIn } from "lucide-react";
+import { getWhatsAppLink, getLoginLink } from "@/lib/constants";
 
 interface NavbarProps {
   onOpenLeadModal?: (plan?: string) => void;
@@ -11,7 +12,6 @@ interface NavbarProps {
 export default function Navbar({ onOpenLeadModal }: NavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const appUrl = process.env.NEXT_PUBLIC_APP_URL || "https://app.licitasentinel.com.br";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -69,21 +69,23 @@ export default function Navbar({ onOpenLeadModal }: NavbarProps) {
           {/* CTAs Desktop */}
           <div className="hidden md:flex items-center gap-3">
             <a
-              href={`${appUrl}/login`}
+              href={getLoginLink()}
               className="px-4 py-2 rounded-xl text-xs font-mono font-medium text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all flex items-center gap-1.5"
             >
               <LogIn className="w-3.5 h-3.5 text-slate-400" />
               <span>Entrar</span>
             </a>
 
-            <button
-              onClick={() => onOpenLeadModal ? onOpenLeadModal("FREE") : window.location.href = `${appUrl}/register`}
+            <a
+              href={getWhatsAppLink("FREE")}
+              target="_blank"
+              rel="noopener noreferrer"
               className="relative group overflow-hidden px-4 py-2.5 rounded-xl bg-gradient-to-r from-cyan-400 to-cyan-500 text-black font-mono font-bold text-xs shadow-[0_0_20px_rgba(0,229,255,0.35)] hover:shadow-[0_0_30px_rgba(0,229,255,0.55)] transition-all flex items-center gap-1.5"
             >
               <Sparkles className="w-3.5 h-3.5 text-cyan-950" />
-              <span>Começar Grátis</span>
+              <span>Testar no WhatsApp</span>
               <ArrowRight className="w-3.5 h-3.5 text-cyan-950 group-hover:translate-x-0.5 transition-transform" />
-            </button>
+            </a>
           </div>
 
           {/* Botão Mobile Hamburger */}
@@ -148,24 +150,23 @@ export default function Navbar({ onOpenLeadModal }: NavbarProps) {
 
           <div className="pt-4 border-t border-slate-800/80 space-y-2">
             <a
-              href={`${appUrl}/login`}
+              href={getLoginLink()}
               className="w-full py-2.5 rounded-xl border border-slate-700 bg-slate-900/80 text-center text-xs font-mono font-bold text-slate-200 flex items-center justify-center gap-2"
             >
               <LogIn className="w-4 h-4 text-slate-400" />
               <span>Acessar Conta</span>
             </a>
 
-            <button
-              onClick={() => {
-                setMobileMenuOpen(false);
-                if (onOpenLeadModal) onOpenLeadModal("FREE");
-                else window.location.href = `${appUrl}/register`;
-              }}
+            <a
+              href={getWhatsAppLink("FREE")}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setMobileMenuOpen(false)}
               className="w-full py-3 rounded-xl bg-gradient-to-r from-cyan-400 to-cyan-500 text-black text-center text-xs font-mono font-bold shadow-[0_0_20px_rgba(0,229,255,0.4)] flex items-center justify-center gap-2"
             >
               <Sparkles className="w-4 h-4" />
-              <span>Criar Conta Gratuita</span>
-            </button>
+              <span>Testar no WhatsApp</span>
+            </a>
           </div>
         </div>
       )}

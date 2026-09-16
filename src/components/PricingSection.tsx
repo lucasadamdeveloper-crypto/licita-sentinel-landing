@@ -2,16 +2,17 @@
 
 import React from "react";
 import { 
-  Zap, 
-  Crown, 
+  CheckCircle2, 
   Sparkles, 
+  ArrowRight, 
+  Crown, 
   ShieldCheck, 
-  ArrowRight,
-  CheckCircle2,
-  Check,
   Shield,
-  MessageSquare
+  Zap, 
+  Bot, 
+  HelpCircle 
 } from "lucide-react";
+import { getWhatsAppLink } from "@/lib/constants";
 
 interface PricingSectionProps {
   onOpenLeadModal: (plan?: string) => void;
@@ -97,13 +98,15 @@ export default function PricingSection({ onOpenLeadModal }: PricingSectionProps)
             </div>
 
             <div className="pt-6">
-              <button
-                onClick={() => onOpenLeadModal("FREE")}
+              <a
+                href={getWhatsAppLink("FREE")}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full py-3 rounded-xl bg-slate-900 border border-slate-700 hover:border-slate-600 hover:bg-slate-800 text-white font-mono font-bold text-xs transition-all flex items-center justify-center gap-1.5"
               >
-                <span>CRIAR CONTA GRÁTIS</span>
+                <span>TESTAR NO WHATSAPP</span>
                 <ArrowRight className="w-3.5 h-3.5 text-slate-400" />
-              </button>
+              </a>
             </div>
           </div>
 
@@ -163,13 +166,15 @@ export default function PricingSection({ onOpenLeadModal }: PricingSectionProps)
             </div>
 
             <div className="pt-6">
-              <button
-                onClick={() => onOpenLeadModal("PRO")}
+              <a
+                href={getWhatsAppLink("PRO")}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full py-3 rounded-xl bg-slate-900 border border-slate-700 hover:border-cyan-400 hover:bg-slate-800 text-white font-mono font-bold text-xs transition-all flex items-center justify-center gap-1.5"
               >
-                <span>ESCOLHER PLANO PRO</span>
+                <span>TESTAR PLANO PRO NO WHATSAPP</span>
                 <ArrowRight className="w-3.5 h-3.5 text-cyan-400" />
-              </button>
+              </a>
             </div>
           </div>
 
@@ -240,13 +245,15 @@ export default function PricingSection({ onOpenLeadModal }: PricingSectionProps)
             </div>
 
             <div className="pt-6">
-              <button
-                onClick={() => onOpenLeadModal("BUSINESS")}
+              <a
+                href={getWhatsAppLink("BUSINESS")}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full py-3.5 rounded-xl bg-gradient-to-r from-amber-400 via-amber-300 to-amber-400 text-black font-mono font-extrabold text-xs shadow-[0_0_25px_rgba(245,158,11,0.35)] hover:shadow-[0_0_40px_rgba(245,158,11,0.6)] hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-1.5"
               >
-                <span>COMEÇAR NO PLANO BUSINESS</span>
+                <span>TESTAR PLANO BUSINESS NO WHATSAPP</span>
                 <ArrowRight className="w-3.5 h-3.5 text-black" />
-              </button>
+              </a>
             </div>
           </div>
 
