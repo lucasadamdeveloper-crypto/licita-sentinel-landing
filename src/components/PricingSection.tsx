@@ -255,13 +255,6 @@ export default function PricingSection({ onOpenLeadModal }: PricingSectionProps)
 
         </div>
 
-        {/* Garantia e Segurança */}
-        <div className="mt-14 max-w-2xl mx-auto p-4 rounded-xl bg-slate-900 border border-slate-800 text-center flex flex-col sm:flex-row items-center justify-center gap-4 text-xs text-slate-300 font-medium">
-          <ShieldCheck className="w-6 h-6 text-emerald-400 shrink-0" />
-          <span>
-            <strong>Flexibilidade Total:</strong> Comece hoje no Plano Gratuito ou faça upgrade quando quiser para ativar os alertas de disputa no WhatsApp.
-          </span>
-        </div>
 
       </div>
     </section>

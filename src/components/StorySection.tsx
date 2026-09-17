@@ -84,28 +84,6 @@ export default function StorySection() {
             </div>
           </div>
 
-          {/* Chamada para Ação com Alto Desejo */}
-          <div className="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="text-center sm:text-left">
-              <span className="text-sm font-bold text-white block">
-                Quer ter essa mesma tecnologia trabalhando para sua empresa hoje?
-              </span>
-              <span className="text-xs text-slate-400">
-                Você pode começar gratuitamente e receber as primeiras oportunidades no seu nicho.
-              </span>
-            </div>
-
-            <a
-              href={getWhatsAppLink("DEMO")}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto px-6 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs sm:text-sm transition-all shadow-md flex items-center justify-center gap-2 shrink-0"
-            >
-              <Sparkles className="w-4 h-4" />
-              <span>QUERO ESSA VANTAGEM NO WHATSAPP</span>
-              <ArrowRight className="w-4 h-4" />
-            </a>
-          </div>
 
         </div>
 
