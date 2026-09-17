@@ -56,7 +56,7 @@ export default function StorySection() {
             </div>
 
             <p>
-              Assim nasceu o <strong>Licita Sentinel: o 1º Sistema Inteligente do Brasil</strong> focado em colocar dinheiro no caixa de quem fornece para o governo — com radar 24h no seu ramo e alertas em tempo real no seu WhatsApp.
+              Assim nasceu o <strong>Licita Sentinel: o 1º Sistema Inteligente do Brasil</strong> focado em colocar dinheiro no caixa de quem fornece para o governo — com radar 24h no seu ramo e alertas em tempo real no seu WhatsApp. <strong>A praticidade e agilidade que levam a um faturamento maior.</strong>
             </p>
           </div>
 

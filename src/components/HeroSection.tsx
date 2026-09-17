@@ -16,7 +16,8 @@ import {
   Search,
   ExternalLink,
   ChevronRight,
-  Filter
+  Filter,
+  TrendingUp
 } from "lucide-react";
 import { getWhatsAppLink } from "@/lib/constants";
 
@@ -57,6 +58,14 @@ export default function HeroSection({ onOpenLeadModal }: HeroSectionProps) {
           <p className="text-xl sm:text-3xl md:text-4xl font-extrabold text-white max-w-3xl mx-auto tracking-tight leading-snug">
             O radar 24h que busca as melhores oportunidades do seu ramo no Brasil inteiro.
           </p>
+
+          {/* Slogan Oficial de Faturamento & Praticidade */}
+          <div className="flex justify-center pt-1">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-950/70 border border-emerald-500/30 text-emerald-300 text-xs sm:text-sm font-semibold shadow-sm">
+              <TrendingUp className="w-4 h-4 text-emerald-400" />
+              <span>A praticidade e agilidade que levam a um faturamento maior.</span>
+            </div>
+          </div>
 
           <p className="text-base sm:text-lg md:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed font-normal">
             <strong className="text-white font-semibold">Nunca mais perca uma licitação lucrativa.</strong> O Licita Sentinel monitora todos os portais públicos do país para o que você fornece e avisa no seu <strong>WhatsApp</strong> novos editais e pregões em disputa.
