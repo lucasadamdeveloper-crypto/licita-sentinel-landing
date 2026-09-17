@@ -54,12 +54,12 @@ export default function Logo({
       {/* 1. EMBLEMA OFICIAL */}
       {variant !== "text" && (
         <div
-          className={`relative ${iconDimensions} rounded-xl overflow-hidden bg-slate-900 border border-slate-700/80 shadow-md flex items-center justify-center p-1 group shrink-0 transition-transform duration-300 hover:scale-105`}
+          className={`relative ${iconDimensions} rounded-xl overflow-hidden flex items-center justify-center group shrink-0 transition-transform duration-300 hover:scale-105`}
         >
           <img
             src="/logo-icon.png"
             alt="Licita Sentinel Emblema Oficial"
-            className="w-full h-full object-contain relative z-10 drop-shadow-sm"
+            className="w-full h-full object-cover relative z-10"
             loading="eager"
           />
 
