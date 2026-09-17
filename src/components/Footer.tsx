@@ -19,8 +19,8 @@ export default function Footer() {
               Plataforma de inteligência de alta performance para empresas vencerem licitações públicas com conformidade estrita à Lei 14.133/2021.
             </p>
 
-            {/* WhatsApp e Status */}
-            <div className="flex flex-col gap-2 pt-2">
+            {/* WhatsApp, Instagram e Status */}
+            <div className="flex flex-col gap-2.5 pt-2">
               <a 
                 href={getWhatsAppLink("GERAL")} 
                 target="_blank" 
@@ -29,6 +29,20 @@ export default function Footer() {
               >
                 <MessageCircle className="w-4 h-4" />
                 <span>WhatsApp Comercial: {WHATSAPP_DISPLAY}</span>
+              </a>
+
+              <a 
+                href="https://www.instagram.com/licita.sentinel/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-xs font-semibold text-pink-400 hover:text-pink-300 transition-colors"
+              >
+                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                </svg>
+                <span>Instagram: @licita.sentinel</span>
               </a>
 
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-xs text-slate-300 w-fit">
