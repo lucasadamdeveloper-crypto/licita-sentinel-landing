@@ -132,10 +132,6 @@ export default function ProblemSolutionSection({ onOpenLeadModal }: ProblemSolut
           <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">
             Sua empresa está perdendo contratos milionários por não saber onde estão as licitações do seu ramo?
           </h2>
-
-          <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-normal">
-            O governo compra <strong>bilhões todos os dias</strong> em produtos e serviços exatamente como os que você vende. O problema é que encontrar essas licitações manualmente em centenas de portais espalhados pelo Brasil é como procurar agulha no palheiro.
-          </p>
         </div>
 
         {/* Comparativo: Busca Manual vs Radar 24h Licita Sentinel */}

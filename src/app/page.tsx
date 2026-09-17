@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
-import SocialProofSection from "@/components/SocialProofSection";
 import ProblemSolutionSection from "@/components/ProblemSolutionSection";
 import FeaturesSection from "@/components/FeaturesSection";
 import InteractiveDemoSection from "@/components/InteractiveDemoSection";
@@ -34,14 +33,11 @@ export default function LandingPage() {
       {/* 1. Barra de Navegação Superior */}
       <Navbar onOpenLeadModal={handleOpenLeadModal} />
 
-      {/* 2. Hero Section com Radar e Visualização de Edital */}
+      {/* 2. Hero Section */}
       <main className="flex-1">
         <HeroSection onOpenLeadModal={handleOpenLeadModal} />
 
-        {/* 3. Portais Homologados e Prova Social */}
-        <SocialProofSection />
-
-        {/* 4. Comparativo de Oportunidades no seu Ramo & Dores de Licitação */}
+        {/* 3. Comparativo de Oportunidades no seu Ramo & Dores de Licitação */}
         <ProblemSolutionSection onOpenLeadModal={handleOpenLeadModal} />
 
         {/* 5. Simulação Interativa (Demonstração ao Vivo do Software) */}
