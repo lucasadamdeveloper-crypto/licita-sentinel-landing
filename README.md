@@ -55,10 +55,11 @@ Landing Page de altíssima conversão para o **Licita Sentinel**, desenvolvida e
 
 ---
 
-## 🎨 Identidade Visual Replicada
+## 🎨 Identidade Visual Corporativa B2B
 
-- **Cores Oficiais**: Dark mode cyber (`#050A14`, `#091122`, `#0E1A33`), ciano elétrico (`#00E5FF`), âmbar dourado (`#F59E0B`) e esmeralda (`#10B981`).
-- **Radar Dinâmico**: Componente `RadarBackground.tsx` com rotação e pulsos de feixe contínuos.
+- **Cores Oficiais**: Dark mode corporativo executivo Navy/Slate profundo (`#0B1120`, `#0F172A`), Azul Corporativo/Precisão (`#2563EB` / `#3B82F6`), Verde Esmeralda WhatsApp (`#10B981`) e detalhes em Slate refinado.
+- **Tipografia**: Plus Jakarta Sans e sans-serif moderno corporativo de alta legibilidade, sem fontes mono em interfaces públicas.
+- **Foco Comercial**: Proteção jurídica do prazo de 2 horas (Lei 14.133/2021) e alta conversão para empresários e analistas de licitação.
 - **Logotipos Oficiais**: Imagens originais em `/public` (`logo-icon.png`, `logo-sentinel.png`, favicons).
 - **Planos Oficiais**:
   - **Plano PRO**: R$ 119,90 / mês.
