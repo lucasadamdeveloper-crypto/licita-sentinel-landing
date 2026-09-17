@@ -1,10 +1,18 @@
 import type { Metadata, Viewport } from "next";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
+
+const plusJakartaSans = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  display: "swap",
+  weight: ["400", "500", "600", "700", "800"],
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://licitasentinel.com.br"),
-  title: "LICITA SENTINEL | Sentinela Inteligente de Licitações PNCP",
-  description: "Rastreamento, triagem e inteligência artificial aplicada a licitações públicas com dados oficiais do PNCP, BLL Compras e Portais Estaduais. Feito para fornecedores vencerem mais com a Lei 14.133/2021.",
+  title: "LICITA SENTINEL | Monitoramento e Alertas de Licitações PNCP",
+  description: "Rastreamento, triagem e alertas em tempo real no WhatsApp para licitações públicas com dados oficiais do PNCP. Feito para fornecedores vencerem mais com a Lei 14.133/2021 sem perder o prazo de 2h.",
   keywords: [
     "licitações",
     "PNCP",
@@ -14,7 +22,7 @@ export const metadata: Metadata = {
     "compras governamentais",
     "radar de licitações",
     "software licitação",
-    "impugnação de edital",
+    "alerta whatsapp licitação",
     "sentinela licitações"
   ],
   authors: [{ name: "Licita Sentinel" }],
@@ -27,7 +35,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "LICITA SENTINEL | O Sentinela Inteligente de Licitações",
-    description: "Encontre, audite e vença licitações antes da sua concorrência com o radar de IA mais avançado do Brasil.",
+    description: "Monitore editais do PNCP e receba convocações do pregoeiro direto no WhatsApp.",
     url: "https://licitasentinel.com.br",
     siteName: "Licita Sentinel",
     images: [
@@ -44,13 +52,13 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "LICITA SENTINEL | O Sentinela Inteligente de Licitações",
-    description: "Encontre, audite e vença licitações antes da sua concorrência com IA.",
+    description: "Monitore editais do PNCP e receba convocações do pregoeiro direto no WhatsApp.",
     images: ["/logo-sentinel.png"],
   },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#00E5FF",
+  themeColor: "#0B1120",
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
@@ -62,8 +70,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className="dark">
-      <body className="bg-[#050A14] text-slate-100 min-h-screen selection:bg-cyan-500/30 selection:text-cyan-200 overflow-x-hidden antialiased">
+    <html lang="pt-BR" className={`dark ${plusJakartaSans.variable}`}>
+      <body className="bg-[#0B1120] text-slate-100 min-h-screen selection:bg-blue-500/30 selection:text-blue-200 overflow-x-hidden antialiased font-sans">
         {children}
       </body>
     </html>

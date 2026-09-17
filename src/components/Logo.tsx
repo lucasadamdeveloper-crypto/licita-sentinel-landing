@@ -51,23 +51,21 @@ export default function Logo({
           : "items-center gap-3"
       } ${className}`}
     >
-      {/* 1. EMBLEMA OFICIAL (ESCUDO LARANJA COM RAIO/CORTE CIANO) */}
+      {/* 1. EMBLEMA OFICIAL */}
       {variant !== "text" && (
         <div
-          className={`relative ${iconDimensions} rounded-2xl overflow-hidden bg-[#071329] border border-cyan-400/40 shadow-[0_0_25px_rgba(0,229,255,0.25)] flex items-center justify-center p-1 group shrink-0 transition-transform duration-300 hover:scale-105`}
+          className={`relative ${iconDimensions} rounded-xl overflow-hidden bg-slate-900 border border-slate-700/80 shadow-md flex items-center justify-center p-1 group shrink-0 transition-transform duration-300 hover:scale-105`}
         >
-          <div className="absolute inset-0 bg-gradient-to-tr from-amber-500/20 via-transparent to-cyan-400/20 pointer-events-none" />
-          
           <img
             src="/logo-icon.png"
             alt="Licita Sentinel Emblema Oficial"
-            className="w-full h-full object-contain relative z-10 drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]"
+            className="w-full h-full object-contain relative z-10 drop-shadow-sm"
             loading="eager"
           />
 
-          <div className="absolute -top-1 -right-1 flex h-2.5 w-2.5 z-20">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-cyan-500"></span>
+          <div className="absolute -top-1 -right-1 flex h-2 w-2 z-20">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
           </div>
         </div>
       )}
@@ -75,15 +73,15 @@ export default function Logo({
       {/* 2. TIPOGRAFIA OFICIAL: LICITA SENTINEL */}
       {variant !== "icon" && (
         <div className={variant === "stacked" ? "space-y-1" : "space-y-0.5 text-left"}>
-          <div className={`font-black font-mono text-white leading-none ${titleSizes} flex items-center ${variant === "stacked" ? "justify-center" : "justify-start"} gap-1.5`}>
+          <div className={`font-extrabold tracking-tight text-white leading-none ${titleSizes} flex items-center ${variant === "stacked" ? "justify-center" : "justify-start"} gap-1.5`}>
             <span className="text-white">LICITA</span>
-            <span className="text-cyan-400 drop-shadow-[0_0_12px_rgba(0,229,255,0.4)]">
+            <span className="text-blue-400">
               SENTINEL
             </span>
           </div>
 
           {showSubtitle && (
-            <p className={`text-slate-400 font-mono uppercase tracking-widest ${subtitleSizes} font-medium leading-tight`}>
+            <p className={`text-slate-400 font-normal tracking-tight ${subtitleSizes} leading-tight`}>
               {subtitleText}
             </p>
           )}

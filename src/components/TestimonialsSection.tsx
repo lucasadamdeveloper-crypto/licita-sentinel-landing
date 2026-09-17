@@ -35,22 +35,22 @@ export default function TestimonialsSection() {
   ];
 
   return (
-    <section id="depoimentos" className="py-24 relative bg-[#070D1B] border-t border-slate-800/80">
+    <section id="depoimentos" className="py-24 relative bg-[#0B1120] border-t border-slate-800/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Cabeçalho */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-xs font-mono text-cyan-300">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-slate-900 border border-slate-700 text-xs font-semibold text-slate-300">
             <Star className="w-3.5 h-3.5 text-amber-400 fill-amber-400" />
-            <span>RESULTADOS COMPROVADOS POR FORNECEDORES</span>
+            <span>RESULTADOS COMPROVADOS POR EMPRESAS</span>
           </div>
 
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
             Quem Usa o Licita Sentinel Não Volta ao Método Antigo
           </h2>
 
-          <p className="text-sm sm:text-base text-slate-400 leading-relaxed">
-            Veja como empresas de tecnologia, serviços, obras e saúde estão vencendo mais licitações com inteligência artificial.
+          <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-normal">
+            Veja como empresas de tecnologia, serviços, obras e saúde estão vencendo mais licitações e protegendo seus prazos.
           </p>
         </div>
 
@@ -59,7 +59,7 @@ export default function TestimonialsSection() {
           {testimonials.map((item, index) => (
             <div
               key={index}
-              className="p-7 rounded-3xl bg-[#091122] border border-slate-800/90 hover:border-cyan-500/40 transition-all duration-300 flex flex-col justify-between relative group"
+              className="p-7 rounded-2xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition-all duration-300 flex flex-col justify-between relative group shadow-sm"
             >
               <div className="space-y-4">
                 
@@ -70,24 +70,24 @@ export default function TestimonialsSection() {
                       <Star key={i} className="w-4 h-4 fill-amber-400" />
                     ))}
                   </div>
-                  <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-950/60 border border-emerald-500/40 text-emerald-400">
+                  <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-emerald-950/80 border border-emerald-500/40 text-emerald-400">
                     {item.highlight}
                   </span>
                 </div>
 
-                <Quote className="w-8 h-8 text-cyan-500/20" />
+                <Quote className="w-8 h-8 text-slate-700" />
 
                 <p className="text-xs sm:text-sm text-slate-300 leading-relaxed italic">
                   "{item.quote}"
                 </p>
               </div>
 
-              <div className="pt-6 mt-6 border-t border-slate-800/80">
+              <div className="pt-6 mt-6 border-t border-slate-800">
                 <h4 className="text-sm font-bold text-white">
                   {item.author}
                 </h4>
                 <p className="text-xs text-slate-400">
-                  {item.role} • <span className="text-cyan-300">{item.company}</span>
+                  {item.role} • <span className="text-blue-400">{item.company}</span>
                 </p>
               </div>
             </div>

@@ -70,13 +70,13 @@ export default function LeadModal({ isOpen, onClose, selectedPlan = "BUSINESS" }
         </button>
 
         {submitted ? (
-          <div className="p-8 text-center space-y-6 animate-in zoom-in-95 duration-300">
-            <div className="w-16 h-16 rounded-full bg-emerald-500/20 border border-emerald-500/50 text-emerald-400 flex items-center justify-center mx-auto shadow-[0_0_30px_rgba(16,185,129,0.3)]">
-              <CheckCircle2 className="w-8 h-8" />
+          <div className="p-8 sm:p-10 text-center space-y-6">
+            <div className="w-16 h-16 rounded-2xl bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 flex items-center justify-center mx-auto shadow-md">
+              <CheckCircle2 className="w-9 h-9" />
             </div>
 
             <div className="space-y-2">
-              <h3 className="text-2xl font-bold text-white">
+              <h3 className="text-2xl font-bold text-white tracking-tight">
                 Conta Liberada com Sucesso!
               </h3>
               <p className="text-xs sm:text-sm text-slate-300 max-w-sm mx-auto leading-relaxed">
@@ -87,30 +87,30 @@ export default function LeadModal({ isOpen, onClose, selectedPlan = "BUSINESS" }
             <div className="pt-2">
               <a
                 href={`${appUrl}/register?email=${encodeURIComponent(email)}&empresa=${encodeURIComponent(empresa)}&plano=${encodeURIComponent(selectedPlan)}`}
-                className="w-full py-4 rounded-2xl bg-gradient-to-r from-cyan-400 to-cyan-500 text-black font-mono font-extrabold text-sm shadow-[0_0_30px_rgba(0,229,255,0.4)] flex items-center justify-center gap-2 hover:scale-[1.02] transition-all"
+                className="w-full py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-sm shadow-md flex items-center justify-center gap-2 hover:scale-[1.02] transition-all"
               >
                 <span>ACESSAR PLATAFORMA AGORA</span>
                 <ArrowRight className="w-4 h-4" />
               </a>
             </div>
 
-            <p className="text-[11px] font-mono text-slate-400">
-              Suas oportunidades estão no Dashboard e as convocações de disputa chegam direto no WhatsApp.
+            <p className="text-xs text-slate-400">
+              Suas oportunidades estão no Painel e as convocações de disputa chegam direto no WhatsApp.
             </p>
           </div>
         ) : (
           <div className="p-6 sm:p-8 space-y-6">
             
             <div className="space-y-1.5 pr-6">
-              <div className="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-cyan-400 uppercase tracking-wider">
+              <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-400 uppercase tracking-wider">
                 <Sparkles className="w-3.5 h-3.5" />
                 <span>ACESSO IMEDIATO • PLANO {selectedPlan}</span>
               </div>
               <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
                 {selectedPlan === "FREE" ? "Crie sua Conta Gratuita" : `Comece no Plano ${selectedPlan}`}
               </h3>
-              <p className="text-xs text-slate-400">
-                Acesse o dashboard com os editais do seu nicho e ative alertas no WhatsApp para quando estiver participando do pregão.
+              <p className="text-xs text-slate-300">
+                Acesse o painel com os editais do seu nicho e ative alertas no WhatsApp para quando estiver participando do pregão.
               </p>
             </div>
 
@@ -122,7 +122,7 @@ export default function LeadModal({ isOpen, onClose, selectedPlan = "BUSINESS" }
 
             <form onSubmit={handleSubmit} className="space-y-3.5 text-xs">
               <div>
-                <label className="block text-slate-300 font-mono mb-1">Seu Nome Completo</label>
+                <label className="block text-slate-200 font-medium mb-1">Seu Nome Completo</label>
                 <div className="relative">
                   <User className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
                   <input
@@ -130,14 +130,14 @@ export default function LeadModal({ isOpen, onClose, selectedPlan = "BUSINESS" }
                     required
                     value={nome}
                     onChange={(e) => setNome(e.target.value)}
-                    placeholder="Ex: Lucas Silva"
-                    className="w-full pl-10 pr-3.5 py-3 rounded-xl bg-[#060C18] border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400 font-sans"
+                    placeholder="Ex: Carlos Silva"
+                    className="w-full pl-10 pr-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 font-sans"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-slate-300 font-mono mb-1">E-mail Corporativo</label>
+                <label className="block text-slate-200 font-medium mb-1">E-mail Corporativo</label>
                 <div className="relative">
                   <Mail className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
                   <input
@@ -146,14 +146,14 @@ export default function LeadModal({ isOpen, onClose, selectedPlan = "BUSINESS" }
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="seu.email@empresa.com.br"
-                    className="w-full pl-10 pr-3.5 py-3 rounded-xl bg-[#060C18] border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400 font-sans"
+                    className="w-full pl-10 pr-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 font-sans"
                   />
                 </div>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
-                  <label className="block text-slate-300 font-mono mb-1">Nome da Empresa</label>
+                  <label className="block text-slate-200 font-medium mb-1">Nome da Empresa</label>
                   <div className="relative">
                     <Building className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
                     <input
@@ -162,13 +162,13 @@ export default function LeadModal({ isOpen, onClose, selectedPlan = "BUSINESS" }
                       value={empresa}
                       onChange={(e) => setEmpresa(e.target.value)}
                       placeholder="Sua Empresa"
-                      className="w-full pl-10 pr-3.5 py-3 rounded-xl bg-[#060C18] border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400 font-sans"
+                      className="w-full pl-10 pr-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 font-sans"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-slate-300 font-mono mb-1">WhatsApp para Alertas de Disputa</label>
+                  <label className="block text-slate-200 font-medium mb-1">WhatsApp para Alertas</label>
                   <div className="relative">
                     <Phone className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
                     <input
@@ -177,20 +177,20 @@ export default function LeadModal({ isOpen, onClose, selectedPlan = "BUSINESS" }
                       value={whatsapp}
                       onChange={(e) => setWhatsapp(e.target.value)}
                       placeholder="(00) 00000-0000"
-                      className="w-full pl-10 pr-3.5 py-3 rounded-xl bg-[#060C18] border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400 font-sans"
+                      className="w-full pl-10 pr-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 font-sans"
                     />
                   </div>
                 </div>
               </div>
 
               <div>
-                <label className="block text-slate-300 font-mono mb-1">Nicho / Segmento Principal</label>
+                <label className="block text-slate-200 font-medium mb-1">Segmento / Ramo de Atuação</label>
                 <input
                   type="text"
                   value={segmento}
                   onChange={(e) => setSegmento(e.target.value)}
                   placeholder="Ex: Tecnologia, Obras, Material Médico, Limpeza..."
-                  className="w-full px-3.5 py-3 rounded-xl bg-[#060C18] border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400 font-sans"
+                  className="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 font-sans"
                 />
               </div>
 
@@ -198,15 +198,15 @@ export default function LeadModal({ isOpen, onClose, selectedPlan = "BUSINESS" }
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full py-4 rounded-2xl bg-gradient-to-r from-cyan-400 via-cyan-300 to-cyan-400 text-black font-mono font-extrabold text-sm shadow-[0_0_25px_rgba(0,229,255,0.35)] hover:shadow-[0_0_40px_rgba(0,229,255,0.6)] transition-all flex items-center justify-center gap-2"
+                  className="w-full py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-sm shadow-md transition-all flex items-center justify-center gap-2"
                 >
                   {loading ? "Liberando Acesso..." : (selectedPlan === "FREE" ? "CRIAR MINHA CONTA GRÁTIS" : `COMEÇAR NO PLANO ${selectedPlan}`)}
                 </button>
               </div>
 
-              <div className="flex items-center justify-center gap-1.5 text-[10px] font-mono text-slate-400 pt-1">
+              <div className="flex items-center justify-center gap-1.5 text-xs text-slate-400 pt-1 font-medium">
                 <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
-                <span>Dados 100% protegidos pela LGPD • Sem fidelidade</span>
+                <span>Dados protegidos pela LGPD • Sem fidelidade</span>
               </div>
             </form>
 

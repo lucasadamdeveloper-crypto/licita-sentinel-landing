@@ -11,12 +11,12 @@ export default function FloatingWhatsApp() {
     <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-2 group">
       {/* Balão de Chamada para Ação */}
       {!closedBalloon && (
-        <div className="relative bg-[#091528] border border-emerald-500/40 text-slate-200 text-xs py-2 px-3.5 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.5)] flex items-center gap-2 max-w-[260px] animate-bounce duration-1000">
+        <div className="relative bg-slate-900 border border-slate-700 text-slate-200 text-xs py-2 px-3.5 rounded-xl shadow-xl flex items-center gap-2 max-w-[260px]">
           <div>
-            <span className="font-bold text-emerald-400 block text-[11px] font-mono uppercase tracking-wider">
+            <span className="font-bold text-emerald-400 block text-xs">
               Atendimento Online
             </span>
-            <span>Tire dúvidas ou solicite seu teste no WhatsApp!</span>
+            <span className="text-slate-300">Tire dúvidas ou solicite seu teste no WhatsApp!</span>
           </div>
           <button
             onClick={(e) => {

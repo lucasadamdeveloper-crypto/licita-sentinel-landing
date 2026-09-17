@@ -38,13 +38,13 @@ export default function FaqSection() {
   };
 
   return (
-    <section id="faq" className="py-24 relative bg-[#050A14]">
+    <section id="faq" className="py-24 relative bg-[#0B1120] border-t border-slate-800/80">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Cabeçalho */}
         <div className="text-center space-y-4 mb-14">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-xs font-mono text-cyan-300">
-            <HelpCircle className="w-3.5 h-3.5" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-slate-900 border border-slate-700 text-xs font-semibold text-slate-300">
+            <HelpCircle className="w-3.5 h-3.5 text-blue-400" />
             <span>DÚVIDAS FREQUENTES</span>
           </div>
 
@@ -52,7 +52,7 @@ export default function FaqSection() {
             Perguntas Frequentes sobre o Licita Sentinel
           </h2>
 
-          <p className="text-sm sm:text-base text-slate-400">
+          <p className="text-sm sm:text-base text-slate-300 font-normal">
             Tudo o que você precisa saber para começar a usar a plataforma hoje mesmo.
           </p>
         </div>
@@ -64,18 +64,18 @@ export default function FaqSection() {
             return (
               <div
                 key={index}
-                className="rounded-2xl bg-[#091122] border border-slate-800 overflow-hidden transition-all duration-200"
+                className="rounded-xl bg-slate-900 border border-slate-800 overflow-hidden transition-all duration-200"
               >
                 <button
                   onClick={() => toggleFaq(index)}
-                  className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 hover:bg-slate-800/40 transition-colors"
+                  className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 hover:bg-slate-800/60 transition-colors"
                 >
                   <span className="text-sm sm:text-base font-bold text-white leading-snug">
                     {faq.q}
                   </span>
                   <div
-                    className={`w-7 h-7 rounded-xl bg-slate-900 border border-slate-700 flex items-center justify-center shrink-0 text-cyan-400 transition-transform duration-200 ${
-                      isOpen ? "rotate-180 bg-cyan-950/80 border-cyan-500/40" : ""
+                    className={`w-7 h-7 rounded-lg bg-slate-800 border border-slate-700 flex items-center justify-center shrink-0 text-blue-400 transition-transform duration-200 ${
+                      isOpen ? "rotate-180 bg-blue-950 border-blue-800" : ""
                     }`}
                   >
                     <ChevronDown className="w-4 h-4" />
@@ -83,7 +83,7 @@ export default function FaqSection() {
                 </button>
 
                 {isOpen && (
-                  <div className="px-5 sm:px-6 pb-6 pt-1 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-slate-800/50 animate-in fade-in duration-200">
+                  <div className="px-5 sm:px-6 pb-6 pt-1 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-slate-800/80 animate-in fade-in duration-200">
                     {faq.a}
                   </div>
                 )}

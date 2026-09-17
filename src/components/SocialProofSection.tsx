@@ -14,12 +14,12 @@ export default function SocialProofSection() {
   ];
 
   return (
-    <section className="py-12 border-y border-slate-800/80 bg-[#070D1C]/60 backdrop-blur-sm relative">
+    <section className="py-12 border-y border-slate-800/80 bg-slate-900/50 backdrop-blur-sm relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center space-y-2 mb-8">
-          <p className="text-xs font-mono font-bold tracking-widest text-slate-400 uppercase">
-            RASTREAMENTO MULTI-FONTES INTEGRADO AOS MAIORES ECOSSISTEMAS PÚBLICOS
+          <p className="text-xs font-semibold tracking-wider text-slate-400 uppercase">
+            RASTREAMENTO INTEGRADO AOS PRINCIPAIS PORTAIS PÚBLICOS DO BRASIL
           </p>
           <h2 className="text-lg sm:text-xl font-bold text-white">
             Conexão direta com fontes oficiais sem intermediários lentos
@@ -31,19 +31,19 @@ export default function SocialProofSection() {
           {portals.map((item, idx) => (
             <div
               key={idx}
-              className="p-3.5 rounded-xl bg-[#091122] border border-slate-800/80 hover:border-cyan-500/40 transition-all flex flex-col justify-between group"
+              className="p-3.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition-all flex flex-col justify-between group shadow-sm"
             >
               <div className="flex items-center justify-between mb-2">
-                <Landmark className="w-4 h-4 text-cyan-400 group-hover:scale-110 transition-transform" />
-                <span className="text-[9px] font-mono px-1.5 py-0.5 rounded bg-slate-800 text-slate-300">
+                <Landmark className="w-4 h-4 text-blue-400 group-hover:scale-110 transition-transform" />
+                <span className="text-[10px] font-medium px-1.5 py-0.5 rounded bg-slate-800 text-slate-300">
                   {item.badge}
                 </span>
               </div>
               <div>
-                <h4 className="text-xs font-bold text-white group-hover:text-cyan-300 transition-colors">
+                <h4 className="text-xs font-bold text-white group-hover:text-blue-300 transition-colors">
                   {item.name}
                 </h4>
-                <p className="text-[10px] text-slate-400 leading-tight mt-0.5">
+                <p className="text-[11px] text-slate-400 leading-tight mt-0.5">
                   {item.desc}
                 </p>
               </div>
@@ -52,14 +52,14 @@ export default function SocialProofSection() {
         </div>
 
         {/* Selos de Garantia e Conformidade Jurídica */}
-        <div className="mt-10 pt-8 border-t border-slate-800/60 flex flex-wrap items-center justify-center gap-6 sm:gap-12 text-xs text-slate-400 font-mono">
+        <div className="mt-10 pt-8 border-t border-slate-800/60 flex flex-wrap items-center justify-center gap-6 sm:gap-12 text-xs text-slate-300 font-medium">
           <div className="flex items-center gap-2">
             <Award className="w-4 h-4 text-amber-400" />
             <span>Estruturado segundo a <strong>Nova Lei 14.133/2021</strong></span>
           </div>
 
           <div className="flex items-center gap-2">
-            <Lock className="w-4 h-4 text-cyan-400" />
+            <Lock className="w-4 h-4 text-blue-400" />
             <span>Criptografia de Dados de Ponta a Ponta</span>
           </div>
 
