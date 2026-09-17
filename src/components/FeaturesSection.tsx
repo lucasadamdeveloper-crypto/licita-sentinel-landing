@@ -3,11 +3,6 @@
 import React from "react";
 import { 
   Radar, 
-  BrainCircuit, 
-  CheckSquare2, 
-  AlertOctagon, 
-  FileSignature, 
-  Kanban, 
   Sparkles, 
   ArrowUpRight 
 } from "lucide-react";
@@ -20,56 +15,6 @@ export default function FeaturesSection() {
       badge: "Economia de Equipe",
       description:
         "Todas as licitações do seu nicho organizadas no Painel em tempo real. E quando sua empresa estiver na disputa, receba alertas imediatos no WhatsApp caso o pregoeiro convoque no prazo de 2h — sem precisar de funcionários dando F5.",
-      color: "from-blue-500/20 to-transparent",
-      borderColor: "border-blue-500/30",
-      iconColor: "text-blue-400",
-    },
-    {
-      icon: BrainCircuit,
-      title: "Auditoria de Edital com IA",
-      badge: "Economia de 90% do Tempo",
-      description:
-        "O Sentinela lê editais densos de 100+ páginas em 30 segundos. Receba um resumo executivo com o objeto real, prazos de entrega e condições comerciais.",
-      color: "from-blue-500/20 to-transparent",
-      borderColor: "border-blue-500/30",
-      iconColor: "text-blue-400",
-    },
-    {
-      icon: CheckSquare2,
-      title: "Kit Pronto para o Prazo de 2 Horas",
-      badge: "Zero Desclassificação",
-      description:
-        "O pregoeiro chamou e deu 2h para proposta e certidões? O Sentinela já audita previamente os Arts. 66 a 69 da Lei 14.133 para você anexar tudo em menos de 15 minutos.",
-      color: "from-emerald-500/20 to-transparent",
-      borderColor: "border-emerald-500/30",
-      iconColor: "text-emerald-400",
-    },
-    {
-      icon: AlertOctagon,
-      title: "Matriz de Riscos & Cláusulas Ocultas",
-      badge: "Proteção Jurídica",
-      description:
-        "Detecção de pegadinhas jurídicas, prazos de pagamento abusivos, penalidades desmedidas e retenções perigosas antes de você dar o primeiro lance.",
-      color: "from-amber-500/20 to-transparent",
-      borderColor: "border-amber-500/30",
-      iconColor: "text-amber-400",
-    },
-    {
-      icon: FileSignature,
-      title: "Minutas de Impugnação em 1 Clique",
-      badge: "Fundamentação TCU",
-      description:
-        "Encontrou um edital direcionado ou ilegal? Gere pedidos de esclarecimento e impugnações completas, citando artigos da lei e jurisprudência oficial.",
-      color: "from-purple-500/20 to-transparent",
-      borderColor: "border-purple-500/30",
-      iconColor: "text-purple-400",
-    },
-    {
-      icon: Kanban,
-      title: "Funil Comercial & Pipeline Kanban",
-      badge: "Gestão Estratégica",
-      description:
-        "Organize todo o processo licitatório em um Kanban de 6 etapas: Descoberta, Análise, Go/No-Go, Impugnação, Pregão e Homologação.",
       color: "from-blue-500/20 to-transparent",
       borderColor: "border-blue-500/30",
       iconColor: "text-blue-400",
@@ -100,37 +45,37 @@ export default function FeaturesSection() {
           </p>
         </div>
 
-        {/* Grade de Recursos */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Card em Destaque Centralizado */}
+        <div className="max-w-2xl mx-auto">
           {features.map((item, index) => {
             const Icon = item.icon;
             return (
               <div
                 key={index}
-                className="group relative p-7 rounded-2xl bg-slate-900 border border-slate-800 hover:border-blue-500/40 transition-all duration-300 shadow-sm hover:shadow-md flex flex-col justify-between"
+                className="group relative p-8 sm:p-9 rounded-2xl bg-slate-900 border border-slate-800 hover:border-blue-500/40 transition-all duration-300 shadow-xl flex flex-col justify-between"
               >
-                <div className="space-y-4">
+                <div className="space-y-5">
                   <div className="flex items-center justify-between">
-                    <div className="w-11 h-11 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center transition-colors">
-                      <Icon className={`w-5 h-5 ${item.iconColor}`} />
+                    <div className="w-12 h-12 rounded-xl bg-blue-950/80 border border-blue-600/40 flex items-center justify-center transition-colors shadow-inner">
+                      <Icon className={`w-6 h-6 ${item.iconColor}`} />
                     </div>
 
-                    <span className="text-[11px] font-medium px-2.5 py-1 rounded-full bg-slate-800/80 border border-slate-700 text-slate-300">
+                    <span className="text-xs font-semibold px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-slate-300">
                       {item.badge}
                     </span>
                   </div>
 
                   <div>
-                    <h3 className="text-base font-bold text-white group-hover:text-blue-300 transition-colors">
+                    <h3 className="text-xl sm:text-2xl font-bold text-white group-hover:text-blue-300 transition-colors">
                       {item.title}
                     </h3>
-                    <p className="text-xs sm:text-sm text-slate-400 leading-relaxed mt-2">
+                    <p className="text-sm sm:text-base text-slate-300 leading-relaxed mt-3">
                       {item.description}
                     </p>
                   </div>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between text-xs font-semibold text-blue-400 group-hover:text-blue-300 transition-colors">
+                <div className="mt-8 pt-5 border-t border-slate-800 flex items-center justify-between text-xs sm:text-sm font-semibold text-blue-400 group-hover:text-blue-300 transition-colors">
                   <span>Conhecer recurso</span>
                   <ArrowUpRight className="w-4 h-4" />
                 </div>
