@@ -12,7 +12,9 @@ import {
   ArrowRight,
   TrendingUp,
   Globe2,
-  DollarSign
+  DollarSign,
+  Clock,
+  ShieldCheck
 } from "lucide-react";
 import { getWhatsAppLink } from "@/lib/constants";
 
@@ -30,32 +32,94 @@ export default function ProblemSolutionSection({ onOpenLeadModal }: ProblemSolut
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Faixa de Informação Importante / Estatística de Vitórias (+45%) */}
-        <div className="mb-16 max-w-4xl mx-auto p-5 sm:p-6 rounded-2xl bg-slate-900 border border-slate-800 shadow-xl flex flex-col sm:flex-row items-center justify-between gap-6">
-          <div className="flex items-center gap-4 text-left">
-            <div className="w-14 h-14 rounded-xl bg-blue-950 border border-blue-800/60 flex items-center justify-center shrink-0">
-              <TrendingUp className="w-7 h-7 text-blue-400" />
-            </div>
-            <div>
-              <div className="flex items-baseline gap-2">
-                <span className="text-3xl sm:text-4xl font-extrabold text-blue-400 tracking-tight">+45%</span>
-                <span className="text-xs sm:text-sm font-bold text-white uppercase tracking-wider">A Mais de Vitórias em Disputas</span>
+        {/* Faixa de Informação Importante / Estatística de Vitórias (+45%) com Tópicos Maiores */}
+        <div className="mb-16 max-w-5xl mx-auto p-6 sm:p-8 rounded-2xl bg-slate-900 border border-slate-800 shadow-2xl space-y-6">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-slate-800/80 pb-5">
+            <div className="flex items-center gap-4">
+              <div className="w-14 h-14 rounded-2xl bg-blue-950/80 border border-blue-600/40 flex items-center justify-center shrink-0 shadow-inner">
+                <TrendingUp className="w-7 h-7 text-blue-400" />
               </div>
-              <p className="text-xs sm:text-sm text-slate-300 mt-1 leading-relaxed">
-                Usuários do Licita Sentinel vencem mais porque não perdem prazos de 2h, evitam editais problemáticos e nunca são desclassificados por falta de documento.
-              </p>
+              <div>
+                <div className="flex flex-wrap items-baseline gap-2.5">
+                  <span className="text-3xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 tracking-tight">
+                    +45%
+                  </span>
+                  <span className="text-sm sm:text-lg font-extrabold text-white uppercase tracking-wider">
+                    A Mais de Vitórias em Disputas
+                  </span>
+                </div>
+                <p className="text-xs sm:text-sm text-slate-400 mt-1">
+                  Média comprovada por empresas que usam o sistema inteligente em pregões públicos
+                </p>
+              </div>
             </div>
+
+            <a
+              href={getWhatsAppLink("ESPECIALISTA")}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs sm:text-sm transition-all shrink-0 shadow-md flex items-center justify-center gap-2"
+            >
+              <span>Falar com Especialista no WhatsApp</span>
+              <ArrowRight className="w-4 h-4" />
+            </a>
           </div>
 
-          <a
-            href={getWhatsAppLink("ESPECIALISTA")}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-6 py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs sm:text-sm transition-all shrink-0 shadow-md flex items-center gap-2"
-          >
-            <span>Falar com Especialista no WhatsApp</span>
-            <ArrowRight className="w-4 h-4" />
-          </a>
+          {/* Tópicos Maiores em Destaque */}
+          <div className="space-y-4">
+            <p className="text-sm sm:text-base font-bold text-slate-200">
+              Usuários do Licita Sentinel vencem mais porque:
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              
+              {/* Tópico 1 */}
+              <div className="p-4 sm:p-5 rounded-xl bg-slate-950/90 border border-slate-800 hover:border-blue-500/50 transition-all space-y-2 group">
+                <div className="flex items-center gap-2.5">
+                  <div className="w-8 h-8 rounded-lg bg-blue-950 border border-blue-500/40 flex items-center justify-center shrink-0">
+                    <CheckCircle2 className="w-5 h-5 text-blue-400" />
+                  </div>
+                  <h4 className="text-sm sm:text-base font-bold text-white leading-tight">
+                    Descobrem a licitação antes
+                  </h4>
+                </div>
+                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed pl-1">
+                  O radar 24h encontra oportunidades do seu ramo no Brasil inteiro no instante em que são publicadas.
+                </p>
+              </div>
+
+              {/* Tópico 2 */}
+              <div className="p-4 sm:p-5 rounded-xl bg-slate-950/90 border border-slate-800 hover:border-amber-500/50 transition-all space-y-2 group">
+                <div className="flex items-center gap-2.5">
+                  <div className="w-8 h-8 rounded-lg bg-amber-950 border border-amber-500/40 flex items-center justify-center shrink-0">
+                    <Clock className="w-5 h-5 text-amber-400" />
+                  </div>
+                  <h4 className="text-sm sm:text-base font-bold text-white leading-tight">
+                    Não perdem prazos de 2h
+                  </h4>
+                </div>
+                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed pl-1">
+                  Alertas imediatos no WhatsApp quando o pregoeiro convoca o envio de propostas ou documentação.
+                </p>
+              </div>
+
+              {/* Tópico 3 */}
+              <div className="p-4 sm:p-5 rounded-xl bg-slate-950/90 border border-slate-800 hover:border-emerald-500/50 transition-all space-y-2 group">
+                <div className="flex items-center gap-2.5">
+                  <div className="w-8 h-8 rounded-lg bg-emerald-950 border border-emerald-500/40 flex items-center justify-center shrink-0">
+                    <ShieldCheck className="w-5 h-5 text-emerald-400" />
+                  </div>
+                  <h4 className="text-sm sm:text-base font-bold text-white leading-tight">
+                    Nunca são desclassificados
+                  </h4>
+                </div>
+                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed pl-1">
+                  Auditoria e checklist inteligente para garantir habilitação completa sem faltar nenhum documento.
+                </p>
+              </div>
+
+            </div>
+          </div>
         </div>
 
         {/* Cabeçalho Focado no Fornecimento para o Governo */}
