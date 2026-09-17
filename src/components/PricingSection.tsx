@@ -156,7 +156,7 @@ export default function PricingSection({ onOpenLeadModal }: PricingSectionProps)
                 </div>
                 <div className="flex items-start gap-2">
                   <CheckCircle2 className="w-4 h-4 text-blue-400 shrink-0 mt-0.5" />
-                  <span><strong>Boletim Matinal por E-mail:</strong> editais prioritários do dia</span>
+                  <span><strong>Boletim de Editais:</strong> acesse a plataforma ou receba no WhatsApp</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <CheckCircle2 className="w-4 h-4 text-blue-400 shrink-0 mt-0.5" />
