@@ -41,17 +41,17 @@ export default function LandingPage() {
         {/* 3. Portais Homologados e Prova Social */}
         <SocialProofSection />
 
-        {/* 4. Comparativo de Dores Reais: Prazo de 2h, Funcionários e Solução WhatsApp */}
+        {/* 4. Comparativo de Oportunidades no seu Ramo & Dores de Licitação */}
         <ProblemSolutionSection onOpenLeadModal={handleOpenLeadModal} />
 
-        {/* 5. Grade de Recursos e Inteligência Artificial */}
+        {/* 5. Simulação Interativa (Demonstração ao Vivo do Software) */}
+        <InteractiveDemoSection onOpenLeadModal={handleOpenLeadModal} />
+
+        {/* 6. Grade de Recursos e Inteligência Artificial */}
         <FeaturesSection />
 
-        {/* 6. Guia para Iniciantes: Qualquer um pode participar com o Sentinela */}
+        {/* 7. Guia para Iniciantes: Qualquer um pode participar com o Sentinela */}
         <BeginnerGuideSection onOpenLeadModal={handleOpenLeadModal} />
-
-        {/* 7. Simulação Interativa (Demonstração ao Vivo) */}
-        <InteractiveDemoSection onOpenLeadModal={handleOpenLeadModal} />
 
         {/* 6. Tabela Oficial de Planos & Preços (PRO e BUSINESS) */}
         <PricingSection onOpenLeadModal={handleOpenLeadModal} />

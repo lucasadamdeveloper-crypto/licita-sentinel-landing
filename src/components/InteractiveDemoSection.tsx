@@ -6,24 +6,11 @@ import {
   Sparkles, 
   CheckCircle2, 
   FileCheck, 
-  FileSignature, 
   Radar, 
   ArrowRight, 
-  Copy, 
-  Check, 
-  ExternalLink,
-  ShieldAlert,
-  Building2,
-  Calendar,
-  DollarSign,
-  Search,
-  Filter,
-  Zap,
-  Clock,
-  FileText,
-  SlidersHorizontal,
-  Tag,
-  TrendingUp
+  Building2, 
+  TrendingUp,
+  AlertCircle
 } from "lucide-react";
 import { getWhatsAppLink } from "@/lib/constants";
 
@@ -32,466 +19,298 @@ interface InteractiveDemoSectionProps {
 }
 
 export default function InteractiveDemoSection({ onOpenLeadModal }: InteractiveDemoSectionProps) {
-  const [activeTab, setActiveTab] = useState<"busca" | "auditoria" | "checklist" | "impugnacao">("busca");
-  const [copied, setCopied] = useState(false);
+  const [activeTab, setActiveTab] = useState<"busca" | "auditoria" | "checklist">("busca");
   const [selectedNiche, setSelectedNiche] = useState<string>("Tecnologia & TI");
-  const [isSearching, setIsSearching] = useState(false);
 
   const niches = [
-    "Tecnologia & TI",
-    "Construção & Reformas",
-    "Alimentos & Merenda",
-    "Saúde & Hospitalar",
-    "Serviços & Limpeza"
+    { label: "Tecnologia & TI", title: "Aquisição de servidores, switches e infraestrutura de rede corporativa" },
+    { label: "Construção & Reformas", title: "Reforma preventiva e manutenção predial com fornecimento de materiais" },
+    { label: "Alimentos & Merenda", title: "Registro de Preços para fornecimento contínuo de gêneros alimentícios" },
+    { label: "Saúde & Medicamentos", title: "Fornecimento de insumos médico-hospitalares e medicamentos de uso geral" },
+    { label: "Serviços & Portaria", title: "Contratação de serviços terceirizados de controle de acesso, portaria e limpeza" }
   ];
 
-  const handleNicheClick = (niche: string) => {
-    setSelectedNiche(niche);
-    setIsSearching(true);
-    setTimeout(() => {
-      setIsSearching(false);
-    }, 400);
-  };
-
-  const handleCopy = () => {
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
+  const currentNicheData = niches.find(n => n.label === selectedNiche) || niches[0];
 
   return (
-    <section id="demonstracao" className="py-24 relative bg-[#0B1120] border-t border-slate-800/80">
+    <section id="demonstracao" className="py-20 relative bg-[#0B1120] border-t border-slate-800/80">
       
       {/* Luz ambiente central */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-blue-600/5 blur-[170px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-blue-600/5 blur-[160px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Título da Seção */}
-        <div className="text-center max-w-3xl mx-auto space-y-4 mb-14">
+        <div className="text-center max-w-3xl mx-auto space-y-4 mb-10">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-slate-900 border border-slate-700 text-xs font-semibold text-slate-300">
             <Cpu className="w-3.5 h-3.5 text-blue-400" />
             <span>DEMONSTRAÇÃO DO SOFTWARE</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-            Veja o Licita Sentinel em Ação da Busca até a Decisão
+          <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
+            Veja Como é Simples Encontrar e Vencer Licitações
           </h2>
 
           <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-normal">
-            Experimente as 4 etapas essenciais: como a plataforma encontra oportunidades no seu nicho, como a IA audita o edital, o checklist da Lei 14.133 e a minuta de impugnação.
+            Selecione seu segmento abaixo e veja como a plataforma organiza as melhores oportunidades públicas em tempo real.
           </p>
 
-          {/* Abas de Navegação Interativa */}
-          <div className="pt-4 flex flex-wrap items-center justify-center gap-2">
+          {/* Abas Limpas de Navegação */}
+          <div className="pt-2 flex flex-wrap items-center justify-center gap-2">
             <button
               onClick={() => setActiveTab("busca")}
-              className={`px-4 py-2.5 rounded-xl text-xs font-semibold transition-all flex items-center gap-2 ${
+              className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-2 cursor-pointer ${
                 activeTab === "busca"
-                  ? "bg-blue-600 text-white shadow-sm"
+                  ? "bg-blue-600 text-white shadow-md"
                   : "bg-slate-900 border border-slate-800 text-slate-300 hover:text-white"
               }`}
             >
               <Radar className="w-4 h-4" />
-              <span>1. Radar de Busca em Tempo Real</span>
+              <span>1. Radar de Oportunidades</span>
             </button>
 
             <button
               onClick={() => setActiveTab("auditoria")}
-              className={`px-4 py-2.5 rounded-xl text-xs font-semibold transition-all flex items-center gap-2 ${
+              className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-2 cursor-pointer ${
                 activeTab === "auditoria"
-                  ? "bg-blue-600 text-white shadow-sm"
+                  ? "bg-blue-600 text-white shadow-md"
                   : "bg-slate-900 border border-slate-800 text-slate-300 hover:text-white"
               }`}
             >
               <Sparkles className="w-4 h-4" />
-              <span>2. Auditoria Instantânea</span>
+              <span>2. Análise de Edital com IA</span>
             </button>
 
             <button
               onClick={() => setActiveTab("checklist")}
-              className={`px-4 py-2.5 rounded-xl text-xs font-semibold transition-all flex items-center gap-2 ${
+              className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-2 cursor-pointer ${
                 activeTab === "checklist"
-                  ? "bg-blue-600 text-white shadow-sm"
+                  ? "bg-blue-600 text-white shadow-md"
                   : "bg-slate-900 border border-slate-800 text-slate-300 hover:text-white"
               }`}
             >
               <FileCheck className="w-4 h-4" />
-              <span>3. Checklist Lei 14.133</span>
-            </button>
-
-            <button
-              onClick={() => setActiveTab("impugnacao")}
-              className={`px-4 py-2.5 rounded-xl text-xs font-semibold transition-all flex items-center gap-2 ${
-                activeTab === "impugnacao"
-                  ? "bg-blue-600 text-white shadow-sm"
-                  : "bg-slate-900 border border-slate-800 text-slate-300 hover:text-white"
-              }`}
-            >
-              <FileText className="w-4 h-4" />
-              <span>4. Minuta de Impugnação</span>
+              <span>3. Checklist de Documentos</span>
             </button>
           </div>
         </div>
 
-        {/* Display da Janela de Simulação */}
-        <div className="max-w-4xl mx-auto rounded-2xl bg-slate-900 border border-slate-800 shadow-2xl overflow-hidden">
+        {/* Display da Janela de Simulação Limpa */}
+        <div className="max-w-3xl mx-auto rounded-2xl bg-slate-900 border border-slate-800 shadow-2xl overflow-hidden">
           
-          {/* Header da janela interativa */}
-          <div className="px-6 py-4 bg-slate-950 border-b border-slate-800 flex items-center justify-between">
-            <div className="flex items-center gap-2.5">
-              <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
-              <span className="text-xs text-slate-200 font-semibold">
-                {activeTab === "busca" && "MÓDULO 01: RADAR DE BUSCA & VARREDURA MULTI-FONTES ATIVA"}
-                {activeTab === "auditoria" && "MÓDULO 02: LEITURA E SÍNTESE DE EDITAL (134 PÁGINAS PROCESSADAS)"}
-                {activeTab === "checklist" && "MÓDULO 03: HABILITAÇÃO & PRAZO DE 2H (ARTS. 66 A 69 LEI 14.133)"}
-                {activeTab === "impugnacao" && "MÓDULO 04: MINUTA AUTOMÁTICA FUNDAMENTADA NO TCU"}
+          {/* Barra Superior da Janela */}
+          <div className="px-5 py-3 bg-slate-950 border-b border-slate-800 flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <div className="flex items-center gap-1.5">
+                <span className="w-2.5 h-2.5 rounded-full bg-slate-700" />
+                <span className="w-2.5 h-2.5 rounded-full bg-slate-700" />
+                <span className="w-2.5 h-2.5 rounded-full bg-slate-700" />
+              </div>
+              <span className="ml-2 text-xs text-slate-400 font-medium hidden sm:inline">
+                Licita Sentinel • Painel de Inteligência
               </span>
             </div>
 
-            <span className="text-xs text-slate-400 hidden sm:inline-block">
-              {activeTab === "busca" ? "PNCP • BLL Compras • Portais Estaduais" : "Processado em 0.8s"}
-            </span>
+            <div className="flex items-center gap-2 text-xs text-slate-300 font-medium">
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+              <span>Radar PNCP Ativo</span>
+            </div>
           </div>
 
           {/* ========================================================================= */}
-          {/* ABA 1: RADAR DE BUSCA EM TEMPO REAL */}
+          {/* ABA 1: RADAR DE OPORTUNIDADES */}
           {/* ========================================================================= */}
           {activeTab === "busca" && (
-            <div className="p-6 sm:p-8 space-y-6 animate-in fade-in duration-300">
+            <div className="p-5 sm:p-7 space-y-5">
               
-              {/* Barra de Busca e Filtros Simulados */}
-              <div className="space-y-3">
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <div className="relative flex-1">
-                    <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
-                    <input
-                      type="text"
-                      readOnly
-                      value={selectedNiche}
-                      className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-slate-950 border border-slate-700 text-white text-xs focus:outline-none"
-                    />
-                    <span className="absolute right-3 top-1/2 -translate-y-1/2 text-[10px] font-semibold text-blue-400 bg-blue-950 px-2 py-0.5 rounded border border-blue-800">
-                      Nicho Ativo
-                    </span>
-                  </div>
-
-                  <div className="flex items-center gap-2">
-                    <div className="px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-700 text-slate-300 text-xs flex items-center gap-1.5">
-                      <SlidersHorizontal className="w-3.5 h-3.5 text-slate-400" />
-                      <span>Região: PR, SP, SC, RS</span>
-                    </div>
-
-                    <button
-                      onClick={() => handleNicheClick(selectedNiche)}
-                      className="px-4 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs transition-all flex items-center gap-1.5 shadow-sm"
-                    >
-                      <Radar className={`w-3.5 h-3.5 ${isSearching ? "animate-spin" : ""}`} />
-                      <span>Filtrando</span>
-                    </button>
-                  </div>
-                </div>
-
-                {/* Filtros Rápidos de Nicho (Interativos) */}
-                <div className="flex flex-wrap items-center gap-1.5 pt-1">
-                  <span className="text-xs text-slate-400 mr-1 flex items-center gap-1">
-                    <Tag className="w-3.5 h-3.5 text-blue-400" /> Simule seu nicho:
-                  </span>
+              {/* Seletor Rápido de Segmentos */}
+              <div>
+                <span className="text-xs text-slate-400 block mb-2 font-medium">
+                  Selecione o segmento da sua empresa:
+                </span>
+                <div className="flex flex-wrap gap-2">
                   {niches.map((niche) => (
                     <button
-                      key={niche}
-                      onClick={() => handleNicheClick(niche)}
-                      className={`px-3 py-1 rounded-lg text-xs font-medium transition-all ${
-                        selectedNiche === niche
-                          ? "bg-blue-600 text-white font-semibold"
-                          : "bg-slate-800 border border-slate-700 text-slate-300 hover:text-white"
+                      key={niche.label}
+                      onClick={() => setSelectedNiche(niche.label)}
+                      className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all cursor-pointer ${
+                        selectedNiche === niche.label
+                          ? "bg-blue-600 text-white font-semibold shadow-sm"
+                          : "bg-slate-950 border border-slate-700 text-slate-300 hover:text-white"
                       }`}
                     >
-                      {niche}
+                      {niche.label}
                     </button>
                   ))}
                 </div>
               </div>
 
-              {/* Status da Varredura Multi-Fontes */}
-              <div className="p-3.5 rounded-xl bg-slate-950 border border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
-                <div className="flex items-center gap-2 text-slate-300">
-                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                  <span>Monitoramento ativo em 5.570 municípios e portais oficiais</span>
-                </div>
-                <span className="text-slate-400">
-                  <strong>142 licitações</strong> encontradas hoje no seu segmento
-                </span>
-              </div>
-
-              {/* Lista de Licitações Encontradas pelo Radar */}
-              <div className="space-y-3">
+              {/* Card Limpo da Oportunidade Encontrada */}
+              <div className="p-5 rounded-xl bg-slate-950 border border-slate-700/80 space-y-4 shadow-sm">
                 
-                {/* Oportunidade 1 (Alta Aderência) */}
-                <div className="p-4 sm:p-5 rounded-xl bg-slate-800/80 border border-slate-700 hover:border-slate-600 transition-all space-y-3 group shadow-sm">
-                  <div className="flex flex-wrap items-center justify-between gap-2">
-                    <div className="flex items-center gap-2">
-                      <span className="px-2.5 py-0.5 rounded bg-blue-950 text-blue-300 border border-blue-800 text-[11px] font-semibold">
-                        PREGÃO ELETRÔNICO Nº 0122/2026
-                      </span>
-                      <span className="text-[11px] px-2 py-0.5 rounded bg-slate-700 text-slate-300">
-                        PNCP OFICIAL
-                      </span>
-                      <span className="text-[11px] px-2 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-800 hidden sm:inline-block">
-                        EXCLUSIVO ME/EPP
-                      </span>
-                    </div>
-
-                    <div className="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-950/80 border border-emerald-500/40 text-emerald-400 text-xs font-bold">
-                      <TrendingUp className="w-3.5 h-3.5" />
-                      <span>SCORE: 96% ALTA CHANCE</span>
-                    </div>
-                  </div>
-
-                  <div>
-                    <h4 className="text-sm sm:text-base font-bold text-white group-hover:text-blue-300 transition-colors">
-                      {selectedNiche === "Construção & Reformas" && "Reforma e manutenção preventiva de unidades escolares com fornecimento de materiais"}
-                      {selectedNiche === "Alimentos & Merenda" && "Registro de Preços para fornecimento de gêneros alimentícios e merenda escolar"}
-                      {selectedNiche === "Saúde & Hospitalar" && "Aquisição de insumos médico-hospitalares e medicamentos de atenção básica"}
-                      {selectedNiche === "Serviços & Limpeza" && "Prestação de serviços terceirizados de limpeza, higienização e portaria"}
-                      {selectedNiche === "Tecnologia & TI" && "Aquisição de infraestrutura de TI, switches gerenciáveis e servidores com suporte"}
-                    </h4>
-                    <div className="flex flex-wrap items-center gap-4 text-xs text-slate-400 mt-1">
-                      <span className="flex items-center gap-1">
-                        <Building2 className="w-3.5 h-3.5" /> Prefeitura Municipal • PR
-                      </span>
-                      <span className="flex items-center gap-1">
-                        <Calendar className="w-3.5 h-3.5" /> Abertura: 24/09 às 09:00
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="pt-2 border-t border-slate-700/60 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
-                    <div className="flex items-baseline gap-1.5">
-                      <span className="text-xs text-slate-400 font-medium">VALOR ESTIMADO:</span>
-                      <span className="text-base font-bold text-emerald-400">R$ 3.820.000,00</span>
-                    </div>
-
-                    <button
-                      onClick={() => setActiveTab("auditoria")}
-                      className="px-3.5 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs transition-all flex items-center gap-1.5 shadow-sm"
-                    >
-                      <Sparkles className="w-3.5 h-3.5" />
-                      <span>Auditar com IA nesta Simulação ➔</span>
-                    </button>
-                  </div>
-                </div>
-
-                {/* Oportunidade 2 (Dispensa Eletrônica Rápida) */}
-                <div className="p-4 sm:p-5 rounded-xl bg-slate-800/80 border border-slate-700 hover:border-slate-600 transition-all space-y-3 shadow-sm">
-                  <div className="flex flex-wrap items-center justify-between gap-2">
-                    <div className="flex items-center gap-2">
-                      <span className="px-2.5 py-0.5 rounded bg-amber-950 text-amber-300 border border-amber-800 text-[11px] font-semibold">
-                        DISPENSA ELETRÔNICA Nº 0045/2026
-                      </span>
-                      <span className="text-[11px] px-2 py-0.5 rounded bg-slate-700 text-slate-300">
-                        COMPRAS.GOV.BR
-                      </span>
-                      <span className="text-[11px] px-2 py-0.5 rounded bg-blue-950 text-blue-300 border border-blue-800">
-                        PRAZO DE 2H DO PREGOEIRO
-                      </span>
-                    </div>
-
-                    <div className="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-blue-950/80 border border-blue-500/40 text-blue-400 text-xs font-bold">
-                      <TrendingUp className="w-3.5 h-3.5" />
-                      <span>SCORE: 92%</span>
-                    </div>
-                  </div>
-
-                  <div>
-                    <h4 className="text-sm sm:text-base font-bold text-white">
-                      Contratação direta emergencial de fornecimento com entrega imediata em até 5 dias
-                    </h4>
-                    <div className="flex flex-wrap items-center gap-4 text-xs text-slate-400 mt-1">
-                      <span className="flex items-center gap-1">
-                        <Building2 className="w-3.5 h-3.5" /> Tribunal Regional • SP
-                      </span>
-                      <span className="flex items-center gap-1 text-amber-400 font-semibold">
-                        ⚡ Disputa encerra hoje às 16:00
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="pt-2 border-t border-slate-700/60 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
-                    <div className="flex items-baseline gap-1.5">
-                      <span className="text-xs text-slate-400 font-medium">VALOR ESTIMADO:</span>
-                      <span className="text-base font-bold text-emerald-400">R$ 148.500,00</span>
-                    </div>
-
-                    <span className="text-xs text-slate-300 flex items-center gap-1">
-                      <Zap className="w-3.5 h-3.5 text-amber-400" /> Alerta ativo no WhatsApp para a disputa
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <div className="flex items-center gap-2">
+                    <span className="px-2 py-0.5 rounded bg-blue-950 text-blue-300 border border-blue-800 text-[11px] font-semibold">
+                      PREGÃO ELETRÔNICO Nº 0122/2026
+                    </span>
+                    <span className="text-[11px] px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium">
+                      PNCP Oficial
                     </span>
                   </div>
+
+                  <span className="px-2 py-0.5 rounded-full bg-emerald-950/80 border border-emerald-500/40 text-emerald-400 text-xs font-bold flex items-center gap-1">
+                    <TrendingUp className="w-3.5 h-3.5" /> 96% Compatível
+                  </span>
                 </div>
 
-              </div>
+                <div>
+                  <h4 className="text-sm sm:text-base font-bold text-white leading-snug">
+                    {currentNicheData.title}
+                  </h4>
+                  <p className="text-xs text-slate-400 mt-1 flex items-center gap-1.5">
+                    <Building2 className="w-3.5 h-3.5 text-slate-400" />
+                    Prefeitura Municipal • Londrina / PR
+                  </p>
+                </div>
 
-              {/* CTA da Aba de Busca */}
-              <div className="p-4 rounded-xl bg-slate-950 border border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-                <span className="text-xs text-slate-300">
-                  Deseja receber as oportunidades do seu nicho no WhatsApp?
-                </span>
-                <a
-                  href={getWhatsAppLink("DEMO")}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-4 py-2 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs transition-all shrink-0 flex items-center gap-1.5 shadow-sm"
-                >
-                  <Sparkles className="w-3.5 h-3.5" />
-                  <span>Ver Editais no WhatsApp</span>
-                </a>
+                {/* Métricas Principais */}
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-3 border-t border-slate-800 text-xs">
+                  <div>
+                    <span className="text-[10px] text-slate-400 block uppercase font-medium">Valor Estimado</span>
+                    <span className="text-sm sm:text-base font-bold text-emerald-400">R$ 2.450.000,00</span>
+                  </div>
+                  <div>
+                    <span className="text-[10px] text-slate-400 block uppercase font-medium">Data da Disputa</span>
+                    <span className="text-xs sm:text-sm font-semibold text-white">29/09 às 10:00</span>
+                  </div>
+                  <div className="col-span-2 sm:col-span-1">
+                    <span className="text-[10px] text-slate-400 block uppercase font-medium">Enquadramento</span>
+                    <span className="text-xs font-medium text-slate-300">Lei 14.133 • Ampla</span>
+                  </div>
+                </div>
+
+                {/* Ações Diretas */}
+                <div className="pt-2 flex flex-col sm:flex-row items-center gap-2">
+                  <a
+                    href={getWhatsAppLink("DEMO")}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full sm:flex-1 py-2.5 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs transition-all flex items-center justify-center gap-1.5 shadow-sm"
+                  >
+                    <Sparkles className="w-3.5 h-3.5" />
+                    <span>Quero Oportunidades Deste Ramo no WhatsApp</span>
+                  </a>
+
+                  <button
+                    onClick={() => setActiveTab("auditoria")}
+                    className="w-full sm:w-auto px-4 py-2.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition-colors flex items-center justify-center gap-1 cursor-pointer"
+                  >
+                    <span>Ver Análise por IA</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </button>
+                </div>
+
               </div>
 
             </div>
           )}
 
           {/* ========================================================================= */}
-          {/* ABA 2: AUDITORIA INSTANTÂNEA COM IA */}
+          {/* ABA 2: ANÁLISE DE EDITAL POR IA */}
           {/* ========================================================================= */}
           {activeTab === "auditoria" && (
-            <div className="p-6 sm:p-8 space-y-6 animate-in fade-in duration-300">
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-4 rounded-xl bg-slate-800/80 border border-slate-700">
+            <div className="p-5 sm:p-7 space-y-4">
+              <div className="p-3.5 rounded-xl bg-slate-950 border border-slate-800 flex items-center justify-between">
                 <div>
-                  <span className="text-xs font-semibold text-blue-400 uppercase tracking-wider block">
-                    EDITAL SELECIONADO PELO RADAR
-                  </span>
-                  <h4 className="text-base font-bold text-white mt-0.5">
-                    Pregão Eletrônico 0122/2026 • Registro de Preços
-                  </h4>
-                  <p className="text-xs text-slate-400">Secretaria de Educação e Administração • Valor Máximo: R$ 3.820.000,00</p>
+                  <h4 className="text-xs font-bold text-white">Pregão Eletrônico 0122/2026</h4>
+                  <p className="text-[11px] text-slate-400">{currentNicheData.title}</p>
                 </div>
-                <div className="flex items-center gap-2 px-4 py-2 rounded-xl bg-emerald-950/60 border border-emerald-500/40 text-emerald-400 text-xs font-bold shrink-0">
-                  <TrendingUp className="w-4 h-4" />
-                  <span>Score Aderência: 95/100</span>
-                </div>
+                <span className="text-xs text-emerald-400 font-bold">Score 95/100</span>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
                 <div className="p-4 rounded-xl bg-slate-950 border border-slate-800 space-y-2">
-                  <span className="text-xs font-bold text-blue-400 flex items-center gap-1.5">
-                    <Sparkles className="w-3.5 h-3.5" /> Pontos Fortes & Atrativos
+                  <span className="font-bold text-emerald-400 flex items-center gap-1.5">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-400" /> Pontos Favoráveis
                   </span>
-                  <ul className="text-xs text-slate-300 space-y-1.5 list-disc list-inside leading-relaxed">
-                    <li>Exigência de atestado de 40% da capacidade técnica (dentro dos limites do TCU).</li>
-                    <li>Pagamento estipulado em 10 dias após a liquidação da nota fiscal.</li>
-                    <li>Possibilidade de subcontratação parcial autorizada expressamente.</li>
+                  <ul className="text-slate-300 space-y-1.5 leading-relaxed">
+                    <li>✓ Exigência técnica proporcional ao objeto.</li>
+                    <li>✓ Pagamento garantido em até 15 dias úteis.</li>
+                    <li>✓ Sem cláusulas abusivas ou direcionamentos.</li>
                   </ul>
                 </div>
 
-                <div className="p-4 rounded-xl bg-slate-950 border border-amber-500/30 space-y-2">
-                  <span className="text-xs font-bold text-amber-400 flex items-center gap-1.5">
-                    <ShieldAlert className="w-3.5 h-3.5 text-amber-400" /> Alertas de Risco & Atenção
+                <div className="p-4 rounded-xl bg-slate-950 border border-slate-800 space-y-2">
+                  <span className="font-bold text-amber-400 flex items-center gap-1.5">
+                    <AlertCircle className="w-4 h-4 text-amber-400" /> Pontos de Atenção
                   </span>
-                  <ul className="text-xs text-slate-300 space-y-1.5 list-disc list-inside leading-relaxed">
-                    <li>Cláusula 9.4 estipula multa de 1% ao dia em caso de atraso na entrega.</li>
-                    <li>Obrigatório laudo de conformidade emitido por laboratório acreditado.</li>
-                    <li>Garantia contratual de 5% exigida em até 10 dias da assinatura.</li>
+                  <ul className="text-slate-300 space-y-1.5 leading-relaxed">
+                    <li>⚠️ Prazo de entrega estipulado em 30 dias.</li>
+                    <li>⚠️ Validade de certidões conferida na abertura.</li>
+                    <li>⚠️ Proposta readequada no prazo de 2 horas.</li>
                   </ul>
                 </div>
               </div>
 
-              <div className="p-4 rounded-xl bg-slate-950 border border-slate-800 flex items-center justify-between">
-                <span className="text-xs text-slate-300">
-                  Quer ver este relatório em tempo real para os editais da sua empresa?
-                </span>
+              <div className="pt-2">
                 <a
                   href={getWhatsAppLink("DEMO")}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-4 py-2 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs transition-all shrink-0 flex items-center gap-1.5 shadow-sm"
+                  className="w-full py-2.5 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs transition-all flex items-center justify-center gap-1.5 shadow-sm"
                 >
                   <Sparkles className="w-3.5 h-3.5" />
-                  <span>Testar com seu CNPJ via WhatsApp</span>
+                  <span>Testar Análise de Edital no WhatsApp</span>
                 </a>
               </div>
             </div>
           )}
 
           {/* ========================================================================= */}
-          {/* ABA 3: CHECKLIST LEI 14.133 & PRAZO DE 2H */}
+          {/* ABA 3: CHECKLIST DE DOCUMENTOS */}
           {/* ========================================================================= */}
           {activeTab === "checklist" && (
-            <div className="p-6 sm:p-8 space-y-4 animate-in fade-in duration-300">
-              <div className="p-3 rounded-xl bg-amber-950/30 border border-amber-500/30 flex items-center gap-2 text-xs text-amber-300 font-medium">
-                <Zap className="w-4 h-4 text-amber-400 shrink-0" />
-                <span>Documentos pré-auditados para responder à convocação de 2 horas do pregoeiro sem pânico:</span>
-              </div>
+            <div className="p-5 sm:p-7 space-y-3">
+              <span className="text-xs text-slate-400 font-medium block">
+                Auditoria automática de certidões e habilitação (Lei 14.133):
+              </span>
 
-              <div className="space-y-3">
-                <div className="p-3.5 rounded-xl bg-slate-800/80 border border-slate-700 flex items-center justify-between">
-                  <div className="flex items-center gap-3">
-                    <div className="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xs font-bold">✓</div>
-                    <div>
-                      <h5 className="text-xs font-bold text-white">Habilitação Jurídica (Art. 66)</h5>
-                      <p className="text-xs text-slate-400">Contrato Social consolidado, procuração e documento dos sócios.</p>
-                    </div>
+              <div className="space-y-2 text-xs">
+                <div className="p-3 rounded-lg bg-slate-950 border border-slate-800 flex items-center justify-between">
+                  <div className="flex items-center gap-2.5">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                    <span className="text-white font-medium">Habilitação Jurídica (Contrato Social & Sócios)</span>
                   </div>
-                  <span className="text-xs text-emerald-400 font-bold">100% APTO</span>
+                  <span className="text-emerald-400 font-bold">100% OK</span>
                 </div>
 
-                <div className="p-3.5 rounded-xl bg-slate-800/80 border border-slate-700 flex items-center justify-between">
-                  <div className="flex items-center gap-3">
-                    <div className="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xs font-bold">✓</div>
-                    <div>
-                      <h5 className="text-xs font-bold text-white">Regularidade Fiscal e Trabalhista (Art. 68)</h5>
-                      <p className="text-xs text-slate-400">CND Federal, FGTS, CNDT e Certidão Estadual válidas no SICAF.</p>
-                    </div>
+                <div className="p-3 rounded-lg bg-slate-950 border border-slate-800 flex items-center justify-between">
+                  <div className="flex items-center gap-2.5">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                    <span className="text-white font-medium">Regularidade Fiscal (Receita Federal, FGTS, CNDT)</span>
                   </div>
-                  <span className="text-xs text-emerald-400 font-bold">VÁLIDAS</span>
+                  <span className="text-emerald-400 font-bold">VÁLIDAS</span>
                 </div>
 
-                <div className="p-3.5 rounded-xl bg-slate-800/80 border border-blue-500/40 flex items-center justify-between">
-                  <div className="flex items-center gap-3">
-                    <div className="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center text-xs font-bold">★</div>
-                    <div>
-                      <h5 className="text-xs font-bold text-white">Qualificação Técnico-Operacional (Art. 67)</h5>
-                      <p className="text-xs text-slate-400">Exigência de atestado de capacidade técnica compatível com o objeto.</p>
-                    </div>
+                <div className="p-3 rounded-lg bg-slate-950 border border-slate-800 flex items-center justify-between">
+                  <div className="flex items-center gap-2.5">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                    <span className="text-white font-medium">Qualificação Técnica (Atestados de Capacidade)</span>
                   </div>
-                  <span className="text-xs text-blue-400 font-bold">ATENDIDO</span>
+                  <span className="text-emerald-400 font-bold">COMPATÍVEL</span>
                 </div>
               </div>
-            </div>
-          )}
 
-          {/* ========================================================================= */}
-          {/* ABA 4: MINUTA DE IMPUGNAÇÃO */}
-          {/* ========================================================================= */}
-          {activeTab === "impugnacao" && (
-            <div className="p-6 sm:p-8 space-y-4 animate-in fade-in duration-300 text-xs">
-              <div className="flex items-center justify-between pb-2 border-b border-slate-800">
-                <span className="text-slate-400 text-xs font-medium">
-                  PEÇA PROCESSUAL GERADA AUTOMATICAMENTE (PRONTA PARA PROTOCOLO)
-                </span>
-                <button
-                  onClick={handleCopy}
-                  className="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 flex items-center gap-1.5 transition-colors font-medium"
+              <div className="pt-2">
+                <a
+                  href={getWhatsAppLink("DEMO")}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-2.5 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs transition-all flex items-center justify-center gap-1.5 shadow-sm"
                 >
-                  {copied ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
-                  <span>{copied ? "Copiado!" : "Copiar Minuta"}</span>
-                </button>
-              </div>
-
-              <div className="p-4 rounded-xl bg-slate-950 border border-slate-800 text-slate-300 space-y-3 leading-relaxed max-h-60 overflow-y-auto text-xs">
-                <p className="text-blue-400 font-bold">
-                  ILUSTRÍSSIMO SENHOR AGENTE DE CONTRATAÇÃO / PREGOEIRO DO EDITAL Nº 0122/2026
-                </p>
-                <p>
-                  <strong>EMPRESA LICITANTE</strong>, inscrita no CNPJ/MF sob nº XX.XXX.XXX/0001-XX, vem, respeitosamente, com fulcro no art. 164 da Lei Federal nº 14.133/2021, tempestivamente interpor:
-                </p>
-                <p className="text-amber-400 font-bold uppercase">
-                  IMPUGNAÇÃO AO EDITAL COM PEDIDO DE RETIFICAÇÃO DE CLÁUSULA RESTRITIVA
-                </p>
-                <p>
-                  1. DA ILEGALIDADE DA CLÁUSULA 8.2: O instrumento convocatório exige marca exclusiva e tempo mínimo de constituição jurídica de 5 anos, violando frontalmente o art. 9º, inciso I da Lei 14.133/2021 e a Súmula nº 272 do Tribunal de Contas da União (TCU)...
-                </p>
-                <p className="text-slate-400">
-                  [...Fundamentação jurídica completa, jurisprudência do TCU e pedidos de deferimento estruturados...]
-                </p>
+                  <Sparkles className="w-3.5 h-3.5" />
+                  <span>Auditar Meus Documentos no WhatsApp</span>
+                </a>
               </div>
             </div>
           )}
