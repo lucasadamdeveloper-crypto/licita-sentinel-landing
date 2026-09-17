@@ -6,7 +6,6 @@ import HeroSection from "@/components/HeroSection";
 import SocialProofSection from "@/components/SocialProofSection";
 import ProblemSolutionSection from "@/components/ProblemSolutionSection";
 import FeaturesSection from "@/components/FeaturesSection";
-import BeginnerGuideSection from "@/components/BeginnerGuideSection";
 import InteractiveDemoSection from "@/components/InteractiveDemoSection";
 import StorySection from "@/components/StorySection";
 import PricingSection from "@/components/PricingSection";
@@ -53,9 +52,6 @@ export default function LandingPage() {
 
         {/* 6. Grade de Recursos e Inteligência Artificial */}
         <FeaturesSection />
-
-        {/* 7. Guia para Iniciantes: Qualquer um pode participar com o Sentinela */}
-        <BeginnerGuideSection onOpenLeadModal={handleOpenLeadModal} />
 
         {/* 6. Tabela Oficial de Planos & Preços (PRO e BUSINESS) */}
         <PricingSection onOpenLeadModal={handleOpenLeadModal} />
