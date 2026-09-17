@@ -12,7 +12,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://licitasentinel.com.br"),
   title: "LICITA SENTINEL | A Rede Social das Licitações",
-  description: "Radar 24 horas para o que você fornece e alertas diários em pregão em disputa. Rastreamento inteligente de editais e convocações da Lei 14.133/2021 no WhatsApp.",
+  description: "O radar 24h que busca as melhores oportunidades do seu ramo no Brasil inteiro. Alertas diários no WhatsApp para você nunca mais perder uma licitação.",
   keywords: [
     "licitações",
     "PNCP",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "LICITA SENTINEL | A Rede Social das Licitações",
-    description: "Radar 24 horas para o que você fornece e alertas diários em pregão em disputa.",
+    description: "O radar 24h que busca as melhores oportunidades do seu ramo no Brasil inteiro. Alertas diários no WhatsApp para você nunca mais perder uma licitação.",
     url: "https://licitasentinel.com.br",
     siteName: "Licita Sentinel",
     images: [
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "LICITA SENTINEL | A Rede Social das Licitações",
-    description: "Radar 24 horas para o que você fornece e alertas diários em pregão em disputa.",
+    description: "O radar 24h que busca as melhores oportunidades do seu ramo no Brasil inteiro. Alertas diários no WhatsApp para você nunca mais perder uma licitação.",
     images: ["/logo-sentinel.png"],
   },
 };

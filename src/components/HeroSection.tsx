@@ -40,7 +40,7 @@ export default function HeroSection({ onOpenLeadModal }: HeroSectionProps) {
               <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
             </span>
             <span className="text-xs font-semibold text-slate-200 tracking-wide">
-              RADAR 24 HORAS • ALERTAS EM DISPUTA • PNCP LEI 14.133/2021
+              RADAR NACIONAL 24H • OPORTUNIDADES DO SEU RAMO NO BRASIL INTEIRO
             </span>
           </div>
         </div>
@@ -54,12 +54,12 @@ export default function HeroSection({ onOpenLeadModal }: HeroSectionProps) {
             </span>
           </h1>
 
-          <p className="text-lg sm:text-2xl md:text-3xl font-bold text-slate-100 max-w-3xl mx-auto tracking-tight leading-snug">
-            Radar 24 horas para o que você fornece e alertas diários em pregão em disputa.
+          <p className="text-xl sm:text-3xl md:text-4xl font-extrabold text-white max-w-3xl mx-auto tracking-tight leading-snug">
+            O radar 24h que busca as melhores oportunidades do seu ramo no Brasil inteiro.
           </p>
 
-          <p className="text-sm sm:text-base md:text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed font-normal">
-            O <strong>Licita Sentinel</strong> rastreia os portais públicos em tempo real para o seu nicho e te avisa no <strong>WhatsApp</strong> em convocações do pregoeiro e no <strong>prazo fatal de 2 horas</strong> — eliminando a necessidade de manter equipe dando F5.
+          <p className="text-base sm:text-lg md:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed font-normal">
+            <strong className="text-white font-semibold">Nunca mais perca uma licitação lucrativa.</strong> O Licita Sentinel monitora todos os portais públicos do país para o que você fornece e avisa no seu <strong>WhatsApp</strong> novos editais e pregões em disputa.
           </p>
 
           {/* Botões de Ação Comercial */}
@@ -88,15 +88,15 @@ export default function HeroSection({ onOpenLeadModal }: HeroSectionProps) {
           <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 pt-2 text-xs text-slate-400 font-medium">
             <div className="flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-              <span>Plano Gratuito sem compromisso</span>
+              <span>Oportunidades do seu nicho no país inteiro</span>
             </div>
             <div className="flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4 text-blue-400" />
-              <span>Alertas no celular do diretor e do analista</span>
+              <span>Alertas diários de pregão em disputa no WhatsApp</span>
             </div>
             <div className="flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4 text-amber-400" />
-              <span>Proteção contra desclassificação sumária</span>
+              <span>Proteção contra o prazo de 2h do pregoeiro</span>
             </div>
           </div>
         </div>
