@@ -35,12 +35,6 @@ export default function Navbar({ onOpenLeadModal }: NavbarProps) {
           {/* Logo Oficial */}
           <div className="flex items-center gap-4">
             <Logo variant="horizontal" size="md" />
-            
-            {/* Status Oficial PNCP */}
-            <div className="hidden lg:flex items-center gap-2 px-2.5 py-1 rounded-full bg-slate-900 border border-slate-700/80 text-[11px] font-medium text-slate-300">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-              <span>Dados Oficiais PNCP • Ativo</span>
-            </div>
           </div>
 
           {/* Links Desktop */}
