@@ -27,7 +27,7 @@ export default function CtaSection({ onOpenLeadModal }: CtaSectionProps) {
             </div>
 
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
-              Pronto para proteger sua empresa e disputar licitações com segurança?
+              Vai deixar passar essa oportunidade?
             </h2>
 
             <p className="text-sm sm:text-base text-slate-300 max-w-2xl mx-auto leading-relaxed font-normal">
