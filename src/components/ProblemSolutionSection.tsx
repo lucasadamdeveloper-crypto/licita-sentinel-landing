@@ -122,17 +122,6 @@ export default function ProblemSolutionSection({ onOpenLeadModal }: ProblemSolut
           </div>
         </div>
 
-        {/* Cabeçalho Focado no Fornecimento para o Governo */}
-        <div className="text-center max-w-3xl mx-auto space-y-4 mb-14">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-950/60 border border-blue-500/40 text-xs font-semibold text-blue-300">
-            <Radar className="w-3.5 h-3.5 text-blue-400" />
-            <span>RADAR 24 HORAS DE OPORTUNIDADES PÚBLICAS</span>
-          </div>
-
-          <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">
-            Sua empresa está perdendo contratos milionários por não saber onde estão as licitações do seu ramo?
-          </h2>
-        </div>
 
         {/* Comparativo: Busca Manual vs Radar 24h Licita Sentinel */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
