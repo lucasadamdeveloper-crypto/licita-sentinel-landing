@@ -11,8 +11,8 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://licitasentinel.com.br"),
-  title: "LICITA SENTINEL | Monitoramento e Alertas de Licitações PNCP",
-  description: "Rastreamento, triagem e alertas em tempo real no WhatsApp para licitações públicas com dados oficiais do PNCP. Feito para fornecedores vencerem mais com a Lei 14.133/2021 sem perder o prazo de 2h.",
+  title: "LICITA SENTINEL | A Rede Social das Licitações",
+  description: "Radar 24 horas para o que você fornece e alertas diários em pregão em disputa. Rastreamento inteligente de editais e convocações da Lei 14.133/2021 no WhatsApp.",
   keywords: [
     "licitações",
     "PNCP",
@@ -34,8 +34,8 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
   openGraph: {
-    title: "LICITA SENTINEL | O Sentinela Inteligente de Licitações",
-    description: "Monitore editais do PNCP e receba convocações do pregoeiro direto no WhatsApp.",
+    title: "LICITA SENTINEL | A Rede Social das Licitações",
+    description: "Radar 24 horas para o que você fornece e alertas diários em pregão em disputa.",
     url: "https://licitasentinel.com.br",
     siteName: "Licita Sentinel",
     images: [
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
         url: "/logo-sentinel.png",
         width: 1200,
         height: 630,
-        alt: "Licita Sentinel - O Sentinela de Licitações",
+        alt: "Licita Sentinel - A Rede Social das Licitações",
       },
     ],
     locale: "pt_BR",
@@ -51,8 +51,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "LICITA SENTINEL | O Sentinela Inteligente de Licitações",
-    description: "Monitore editais do PNCP e receba convocações do pregoeiro direto no WhatsApp.",
+    title: "LICITA SENTINEL | A Rede Social das Licitações",
+    description: "Radar 24 horas para o que você fornece e alertas diários em pregão em disputa.",
     images: ["/logo-sentinel.png"],
   },
 };

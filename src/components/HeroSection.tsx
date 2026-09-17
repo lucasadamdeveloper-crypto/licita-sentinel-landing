@@ -40,22 +40,26 @@ export default function HeroSection({ onOpenLeadModal }: HeroSectionProps) {
               <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
             </span>
             <span className="text-xs font-semibold text-slate-200 tracking-wide">
-              MONITORAMENTO OFICIAL PNCP • LEI 14.133/2021
+              RADAR 24 HORAS • ALERTAS EM DISPUTA • PNCP LEI 14.133/2021
             </span>
           </div>
         </div>
 
-        {/* Título Principal Focado em Negócios */}
-        <div className="text-center max-w-4xl mx-auto space-y-6">
-          <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-[1.15]">
-            Nunca mais perca um contrato público por{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-emerald-400 to-teal-300">
-              perder o prazo de 2 horas
+        {/* Título Principal: Slogan Oficial e Proposta de Valor */}
+        <div className="text-center max-w-4xl mx-auto space-y-5">
+          <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold text-white tracking-tight leading-[1.1]">
+            A Rede Social das{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-300 to-teal-300">
+              Licitações
             </span>
           </h1>
 
-          <p className="text-base sm:text-lg md:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed font-normal">
-            O <strong>Licita Sentinel</strong> monitora o PNCP 24 horas por dia e <strong>avisa sua equipe no WhatsApp</strong> no instante em que o pregoeiro abrir convocação no chat ou fase de lances — eliminando o custo de manter funcionários dando F5.
+          <p className="text-lg sm:text-2xl md:text-3xl font-bold text-slate-100 max-w-3xl mx-auto tracking-tight leading-snug">
+            Radar 24 horas para o que você fornece e alertas diários em pregão em disputa.
+          </p>
+
+          <p className="text-sm sm:text-base md:text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed font-normal">
+            O <strong>Licita Sentinel</strong> rastreia os portais públicos em tempo real para o seu nicho e te avisa no <strong>WhatsApp</strong> em convocações do pregoeiro e no <strong>prazo fatal de 2 horas</strong> — eliminando a necessidade de manter equipe dando F5.
           </p>
 
           {/* Botões de Ação Comercial */}
