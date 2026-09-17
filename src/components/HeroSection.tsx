@@ -68,7 +68,7 @@ export default function HeroSection({ onOpenLeadModal }: HeroSectionProps) {
           </div>
 
           <p className="text-base sm:text-lg md:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed font-normal">
-            <strong className="text-white font-semibold">Nunca mais perca uma licitação lucrativa.</strong> O Licita Sentinel monitora todos os portais públicos do país para o que você fornece e avisa no seu <strong>WhatsApp</strong> novos editais e pregões em disputa.
+            <strong className="text-white font-semibold">Acabou o spam de licitação por e-mail.</strong> Tenha as melhores licitações na palma da sua mão acessando direto pela plataforma ou recebendo alertas em tempo real no seu <strong>WhatsApp</strong>.
           </p>
 
           {/* Botões de Ação Comercial */}
