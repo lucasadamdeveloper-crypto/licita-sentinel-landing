@@ -36,11 +36,11 @@ export default function LandingPage() {
       <main className="flex-1">
         <HeroSection onOpenLeadModal={handleOpenLeadModal} />
 
-        {/* 3. Comparativo de Oportunidades no seu Ramo & Dores de Licitação */}
-        <ProblemSolutionSection onOpenLeadModal={handleOpenLeadModal} />
-
-        {/* 5. Simulação Interativa (Demonstração ao Vivo do Software) */}
+        {/* 3. Simulação Interativa (Demonstração ao Vivo do Software) - Logo abaixo do botão verde */}
         <InteractiveDemoSection onOpenLeadModal={handleOpenLeadModal} />
+
+        {/* 4. Comparativo de Oportunidades no seu Ramo & Dores de Licitação */}
+        <ProblemSolutionSection onOpenLeadModal={handleOpenLeadModal} />
 
         {/* 6. Storytelling: A Tecnologia dos EUA adaptada como 1º Sistema Inteligente do Brasil */}
         <StorySection />

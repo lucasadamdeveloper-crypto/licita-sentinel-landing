@@ -317,6 +317,45 @@ export default function InteractiveDemoSection({ onOpenLeadModal }: InteractiveD
 
         </div>
 
+        {/* Faixa de Métricas e Credibilidade Corporativa */}
+        <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+          <div className="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 text-center">
+            <div className="text-2xl sm:text-3xl font-extrabold text-white">
+              +R$ 1.8 Bi
+            </div>
+            <div className="text-xs text-slate-400 mt-1 font-medium">
+              Oportunidades no PNCP
+            </div>
+          </div>
+
+          <div className="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 text-center">
+            <div className="text-2xl sm:text-3xl font-extrabold text-emerald-400">
+              WhatsApp
+            </div>
+            <div className="text-xs text-slate-400 mt-1 font-medium">
+              Alertas Imediatos no Celular
+            </div>
+          </div>
+
+          <div className="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 text-center">
+            <div className="text-2xl sm:text-3xl font-extrabold text-blue-400">
+              Prazo de 2h
+            </div>
+            <div className="text-xs text-slate-400 mt-1 font-medium">
+              Proteção Contra Desclassificação
+            </div>
+          </div>
+
+          <div className="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 text-center">
+            <div className="text-2xl sm:text-3xl font-extrabold text-emerald-400">
+              Plano Free
+            </div>
+            <div className="text-xs text-slate-400 mt-1 font-medium">
+              Sem Cartão de Crédito
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
   );
