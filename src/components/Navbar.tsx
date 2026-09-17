@@ -45,13 +45,6 @@ export default function Navbar({ onOpenLeadModal }: NavbarProps) {
 
           {/* Links Desktop */}
           <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300">
-            <a href="#recursos" className="hover:text-white transition-colors">
-              Recursos
-            </a>
-            <a href="#como-comecar" className="hover:text-white transition-colors text-slate-200 flex items-center gap-1.5">
-              <span>Como Começar</span>
-              <span className="text-[10px] px-1.5 py-0.5 rounded bg-blue-500/20 text-blue-400 font-semibold">Novo</span>
-            </a>
             <a href="#demonstracao" className="hover:text-white transition-colors">
               Como Funciona
             </a>
@@ -103,21 +96,6 @@ export default function Navbar({ onOpenLeadModal }: NavbarProps) {
       {mobileMenuOpen && (
         <div className="md:hidden bg-[#0B1120]/98 backdrop-blur-2xl border-b border-slate-800 px-4 py-6 space-y-4 animate-in slide-in-from-top duration-200">
           <nav className="flex flex-col space-y-3 text-sm font-medium text-slate-200">
-            <a
-              href="#recursos"
-              onClick={() => setMobileMenuOpen(false)}
-              className="py-2 px-3 rounded-lg hover:bg-slate-800 hover:text-white"
-            >
-              Recursos
-            </a>
-            <a
-              href="#como-comecar"
-              onClick={() => setMobileMenuOpen(false)}
-              className="py-2 px-3 rounded-lg hover:bg-slate-800 text-blue-400 flex items-center justify-between"
-            >
-              <span>Como Começar do Zero</span>
-              <span className="text-[10px] px-2 py-0.5 rounded bg-blue-950 text-blue-300 border border-blue-800">Novo</span>
-            </a>
             <a
               href="#demonstracao"
               onClick={() => setMobileMenuOpen(false)}
