@@ -40,7 +40,7 @@ export default function HeroSection({ onOpenLeadModal }: HeroSectionProps) {
               <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
             </span>
             <span className="text-xs font-semibold text-slate-200 tracking-wide">
-              RADAR NACIONAL 24H • OPORTUNIDADES DO SEU RAMO NO BRASIL INTEIRO
+              1º SISTEMA INTELIGENTE DO BRASIL • RADAR 24H NO SEU RAMO
             </span>
           </div>
         </div>

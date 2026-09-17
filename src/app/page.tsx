@@ -8,6 +8,7 @@ import ProblemSolutionSection from "@/components/ProblemSolutionSection";
 import FeaturesSection from "@/components/FeaturesSection";
 import BeginnerGuideSection from "@/components/BeginnerGuideSection";
 import InteractiveDemoSection from "@/components/InteractiveDemoSection";
+import StorySection from "@/components/StorySection";
 import PricingSection from "@/components/PricingSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import FaqSection from "@/components/FaqSection";
@@ -46,6 +47,9 @@ export default function LandingPage() {
 
         {/* 5. Simulação Interativa (Demonstração ao Vivo do Software) */}
         <InteractiveDemoSection onOpenLeadModal={handleOpenLeadModal} />
+
+        {/* 6. Storytelling: A Tecnologia dos EUA adaptada como 1º Sistema Inteligente do Brasil */}
+        <StorySection />
 
         {/* 6. Grade de Recursos e Inteligência Artificial */}
         <FeaturesSection />
