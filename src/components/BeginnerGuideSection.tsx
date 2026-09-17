@@ -76,34 +76,6 @@ export default function BeginnerGuideSection({ onOpenLeadModal }: BeginnerGuideS
           </p>
         </div>
 
-        {/* Faixa de Estatística Comprovada */}
-        <div className="mb-14 max-w-4xl mx-auto p-5 sm:p-6 rounded-2xl bg-slate-900 border border-slate-800 shadow-lg flex flex-col sm:flex-row items-center justify-between gap-6">
-          <div className="flex items-center gap-4 text-left">
-            <div className="w-14 h-14 rounded-xl bg-blue-950 border border-blue-800/60 flex items-center justify-center shrink-0">
-              <TrendingUp className="w-7 h-7 text-blue-400" />
-            </div>
-            <div>
-              <div className="flex items-baseline gap-2">
-                <span className="text-3xl sm:text-4xl font-extrabold text-blue-400 tracking-tight">+45%</span>
-                <span className="text-xs sm:text-sm font-bold text-white uppercase tracking-wider">A Mais de Vitórias em Disputas</span>
-              </div>
-              <p className="text-xs text-slate-300 mt-0.5">
-                Usuários do Licita Sentinel vencem mais porque não perdem prazos de 2h, evitam editais problemáticos e nunca são desclassificados por falta de documento.
-              </p>
-            </div>
-          </div>
-
-          <a
-            href={getWhatsAppLink("INICIANTE")}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-6 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs transition-all shrink-0 shadow-md flex items-center gap-2"
-          >
-            <span>Falar com Especialista no WhatsApp</span>
-            <ArrowRight className="w-4 h-4" />
-          </a>
-        </div>
-
         {/* Passo a Passo Interativo para Iniciantes */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           

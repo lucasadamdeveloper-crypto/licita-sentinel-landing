@@ -30,6 +30,34 @@ export default function ProblemSolutionSection({ onOpenLeadModal }: ProblemSolut
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
+        {/* Faixa de Informação Importante / Estatística de Vitórias (+45%) */}
+        <div className="mb-16 max-w-4xl mx-auto p-5 sm:p-6 rounded-2xl bg-slate-900 border border-slate-800 shadow-xl flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div className="flex items-center gap-4 text-left">
+            <div className="w-14 h-14 rounded-xl bg-blue-950 border border-blue-800/60 flex items-center justify-center shrink-0">
+              <TrendingUp className="w-7 h-7 text-blue-400" />
+            </div>
+            <div>
+              <div className="flex items-baseline gap-2">
+                <span className="text-3xl sm:text-4xl font-extrabold text-blue-400 tracking-tight">+45%</span>
+                <span className="text-xs sm:text-sm font-bold text-white uppercase tracking-wider">A Mais de Vitórias em Disputas</span>
+              </div>
+              <p className="text-xs sm:text-sm text-slate-300 mt-1 leading-relaxed">
+                Usuários do Licita Sentinel vencem mais porque não perdem prazos de 2h, evitam editais problemáticos e nunca são desclassificados por falta de documento.
+              </p>
+            </div>
+          </div>
+
+          <a
+            href={getWhatsAppLink("ESPECIALISTA")}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs sm:text-sm transition-all shrink-0 shadow-md flex items-center gap-2"
+          >
+            <span>Falar com Especialista no WhatsApp</span>
+            <ArrowRight className="w-4 h-4" />
+          </a>
+        </div>
+
         {/* Cabeçalho Focado no Fornecimento para o Governo */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-14">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-950/60 border border-blue-500/40 text-xs font-semibold text-blue-300">
